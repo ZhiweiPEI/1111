@@ -38,7 +38,7 @@
             <form class="form-horizontal">
                 <span class="heading">LOGIN WITH QR CODE</span>
                 <div>
-                    <img src="../img/WechatIMG90.jpeg" width="200px" height="200px"/>
+                    <img src="../img/WechatIMG91.jpeg" width="200px" height="200px"/>
                 </div>
             </form>
         </div>

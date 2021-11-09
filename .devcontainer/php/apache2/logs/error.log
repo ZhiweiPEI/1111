@@ -1355,3 +1355,10 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Tue Nov 09 14:00:07.740271 2021] [php:notice] [pid 6347] [client 172.20.0.1:45666] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.20.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
 [Tue Nov 09 14:17:36.627199 2021] [php:error] [pid 22] [client 172.20.0.1:45718] script '/var/www/html/static/html/index/index.php' not found or unable to stat
 >>>>>>> c8b5b3d1124974be07c61825eebd2d3f14f485eb
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Nov 09 14:36:34.733474 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/8.0.12 configured -- resuming normal operations
+[Tue Nov 09 14:36:34.734408 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Nov 09 14:37:19.328802 2021] [php:notice] [pid 19] [client 172.19.0.1:57042] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.19.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[Tue Nov 09 14:40:25.116109 2021] [php:notice] [pid 22] [client 172.19.0.1:57060] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.19.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[Tue Nov 09 14:41:27.705584 2021] [php:notice] [pid 18] [client 172.19.0.1:57074] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.19.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[Tue Nov 09 14:48:33.093674 2021] [php:notice] [pid 20] [client 172.19.0.1:57092] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.19.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
