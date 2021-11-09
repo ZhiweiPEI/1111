@@ -1225,3 +1225,10 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
 [Tue Nov 09 10:38:21.776942 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/8.0.12 configured -- resuming normal operations
 [Tue Nov 09 10:38:21.778147 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Nov 09 13:17:38.934971 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/8.0.12 configured -- resuming normal operations
+[Tue Nov 09 13:17:38.935394 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Nov 09 13:21:38.526870 2021] [php:error] [pid 18] [client 172.20.0.1:45478] script '/var/www/html/index.php' not found or unable to stat
+[Tue Nov 09 13:22:04.615628 2021] [php:error] [pid 19] [client 172.20.0.1:45482] script '/var/www/html/index.php' not found or unable to stat
+[Tue Nov 09 13:23:59.764659 2021] [php:notice] [pid 819] [client 172.20.0.1:45506] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.20.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
+[Tue Nov 09 13:24:17.568848 2021] [php:notice] [pid 18] [client 172.20.0.1:45512] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.20.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(
