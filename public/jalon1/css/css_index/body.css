@@ -1,0 +1,33 @@
+.bili-wrapper {
+    padding-bottom: 40px;
+}
+.bili-wrapper-left {
+    width: 440px;
+    height: 220px;
+}
+.bili-wrapper-left p {
+    background: rgba(0,0,0,.64);
+    width: 50px;
+    height: 24px;
+    text-align: center;
+    border-radius: 4px;
+    transition: all .2s linear;
+    font-size: 14px;
+    color: white;
+    position: relative;
+    top: -60px;
+    left: 380px;
+    display: none;
+}
+.bili-wrapper-right {
+    width: 550px;
+    height: 220px;
+}
+
+.on {
+    display: block;
+}
+
+.off {
+    display: none;
+}
