@@ -1,5 +1,5 @@
 body {
-    width:1024px;
+    width:auto;
     height: 600px;
 }
 
@@ -10,15 +10,16 @@ body {
 
 }
 .nav-menu {
-    position: absolute;
+    position:fixed;
 }
 
 .nav-menu li , .nav-menu li a{
-    padding: 0 5px;
-    color: black;
+    padding: 0 20px;
+    color: rgb(0, 0, 0);
     line-height:42px;
     font-size: 10px;
     height: 42px;
+    right:0;
 }
 .nav-con li:hover {
     background-color:  hsla(0,0%,100%,.5)
@@ -84,7 +85,6 @@ body {
 }
 .search form {
     display: inline-block;
-    float: right;
 }
 .search form  input {
     outline: none;
