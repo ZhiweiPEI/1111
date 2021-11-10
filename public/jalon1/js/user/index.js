@@ -28,25 +28,25 @@ $('#uploadBtn').click(function() {
 // var curPage = 1;
 // var pageSize = 10;
 // var type = "公司新闻";
-// $(function () {
+$(function () {
 //     findCompanyModel();
 //     findNavModels();
 //     findNewsModels();
-//     layui.use(['laypage'], function() {
-//         var laypage = layui.laypage;
+    layui.use(['laypage'], function() {
+        var laypage = layui.laypage;
 
-//         laypage.render({
-//             elem: 'page'
-//             , count: getCount(type)
-//             , layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
-//             , jump: function (obj) {
-//                 curPage = obj.curr;
-//                 pageSize = obj.limit;
-//                 findNewsModels();
-//             }
-//         });
-//     });
-// });
+        laypage.render({
+            elem: 'page'
+            , count: 10
+            , layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+            , jump: function (obj) {
+                curPage = obj.curr;
+                pageSize = obj.limit;
+                // findNewsModels();
+            }
+        });
+    });
+ });
 
 // function getCount(data) {
 //     let tokenHead = sessionStorage.getItem("tokenHead");

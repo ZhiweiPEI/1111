@@ -5,13 +5,13 @@
 
 .header{
     background-size: 100% 100%;
+    background-image: url("../../img/index_img/headerBackground.png");
     height: 200px;
     display: flex;
     justify-content: center;
 }
 
 .header_center{
-    background-color:rgb(195, 210, 225);
     width: 60%;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .name{
-    color: green;
+    color: orange;
 }
 
 .name>p{
@@ -37,18 +37,18 @@
 }
 
 .contact{
-    color: green;
+    color: orange;
     margin-left: 60px;
 }
 
 .email{
     margin-left: 10px;
-    color: gray;
+    color: orange;
 }
 
 .tele{
     margin-left: 10px;
-    color: gray;
+    color: orange   ;
 }
 
 .profile>img{
@@ -63,7 +63,7 @@
     margin-top: 100px;
 }
 
-/* .content{
+.content{
     display: flex;
     justify-content: center;
 }
@@ -74,14 +74,15 @@
 
 .content_top{
     display: flex;
-    border-bottom: green solid;
+    border-bottom: pink solid;
 }
 
 .content_top div{
+    font-size: 30px;
     width: 30%;
     margin: 20px;
     text-align: center;
-    color: green;
+    color: pink;
     height: 40px;
     line-height: 40px;
 }
@@ -89,7 +90,7 @@
 .content_top div:hover{
     height: 40px;
     width: 30%;
-    background-color: green;
+    background-color: pink;
     color: white;
     line-height: 40px;
 }
@@ -137,7 +138,7 @@
 }
 
 .content_bottom>div:nth-child(2){
-    background-color: green;
+    background-color: pink;
     color: white;
 }
 
@@ -147,12 +148,13 @@
 }
 
 .footer_center{
-    width: 40%;
+    width: 80%;
     height: 50px;
     line-height: 50px;
 }
 
 .footer_center a{
+    text-align: center;
     font-size: 14px;
     color: black;
     width: 100px;
@@ -166,4 +168,4 @@
 
 a{
     text-decoration: none;
-} */
+}

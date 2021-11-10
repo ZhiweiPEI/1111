@@ -50,15 +50,64 @@
     <div class="content">
         <div class="content_center">
             <div class="content_top">
-                <div class="top_left" onmouseover="select_news_type(this)">公司新闻</div>
+                <div class="top_left" onmouseover="select_news_type(this)">Likes</div>
 
-                <div class="top_mid"  onmouseover="select_news_type(this)">行业资讯</div>
+                <div class="top_mid"  onmouseover="select_news_type(this)">History</div>
 
-                <div class="top_right" onmouseover="select_news_type(this)">媒体报道</div>
+                <div class="top_right" onmouseover="select_news_type(this)">PlayLists</div>
             </div>
 
             <div class="content_mid" id="news_titles">
-
+                <div>
+                    <div>Type</div>
+                    <div>Title</a><span> status</span></div>
+                    <div>date</div>
+                </div>
+                <div>
+                    <div>Type</div>
+                    <div>Title</a><span> status</span></div>
+                    <div>date</div>
+                </div>
+                <div>
+                    <div>Type</div>
+                    <div>Title</a><span> status</span></div>
+                    <div>date</div>
+                </div>
+                <div>
+                    <div>Type</div>
+                    <div>Title</a><span> status</span></div>
+                    <div>date</div>
+                </div>
+                <div>
+                    <div>Type</div>
+                    <div>Title</a><span> status</span></div>
+                    <div>date</div>
+                </div>
+                <div>
+                    <div>Type</div>
+                    <div>Title</a><span> status</span></div>
+                    <div>date</div>
+                </div>
+                <div>
+                    <div>Type</div>
+                    <div>Title</a><span> status</span></div>
+                    <div>date</div>
+                </div>
+                <div>
+                    <div>Type</div>
+                    <div>Title</a><span> status</span></div>
+                    <div>date</div>
+                </div>
+                <div>
+                    <div>Type</div>
+                    <div>Title</a><span> status</span></div>
+                    <div>date</div>
+                </div>
+                <div>
+                    <div>Type</div>
+                    <div>Title</a><span> status</span></div>
+                    <div>date</div>
+                </div>
             </div>
 
             <div class="page" id="page">
@@ -71,7 +120,14 @@
     <div class="footer">
         <div class="footer_center">
             <div class="footer_top" id="footNav">
-
+                <a href="">nav</a>
+                <a href="">nav</a>
+                <a href="">nav</a>
+                <a href="">nav</a>
+                <a href="">nav</a>
+                <a href="">nav</a>
+                <a href="">nav</a>
+                <a href="">nav</a>
             </div>
         </div>
     </div>
