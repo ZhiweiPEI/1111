@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/logup.css"> 
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<script src="../../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="../js/user/logup.js"></script>
 </head>
 <body>
 
