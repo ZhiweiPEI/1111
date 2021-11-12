@@ -1,5 +1,5 @@
 .bili-wrapper {
-    padding-bottom: 40px;
+    padding-bottom: 4px;
 }
 .bili-wrapper-left {
     width: 440px;
@@ -20,8 +20,12 @@
     display: none;
 }
 .bili-wrapper-right {
-    width: 550px;
+    width: 1000px;
     height: 220px;
+
+}
+.bili-wrapper-right-img{
+    display:inline-table;
 }
 
 .on {

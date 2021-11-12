@@ -41,30 +41,36 @@
             <ul>
                 <li class="bili-wrapper-right-img">
                     <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_0.jpg" alt="">
-                    <div class=""></div>
-                </li>
-                <li class="bili-wrapper-right-img ">
+                    <div class="">我想变成男同
+                    </div>
                     <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_1.jpg" alt="">
                     <div class=""></div>
                 </li>
-                <li class="bili-wrapper-right-img ">
+                <li class="bili-wrapper-right-img">
                     <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_2.jpg" alt="">
                     <div class=""></div>
-
-                </li>
-                <li class="bili-wrapper-right-img ">
                     <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_3.jpg" alt="">
                     <div class=""></div>
                 </li>
-                <li class="bili-wrapper-right-img ">
+                <li class="bili-wrapper-right-img">
                     <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_4.jpg" alt="">
                     <div class=""></div>
-                </li>
-                <li class="bili-wrapper-right-img ">
                     <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_5.jpg" alt="">
                     <div class=""></div>
                 </li>
-
+                <li class="bili-wrapper-right-img">
+                    <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_0.jpg" alt="">
+                    <div class=""></div>
+                    <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_1.jpg" alt="">
+                    <div class=""></div>
+                </li>
+                <li class="bili-wrapper-right-img">
+                    <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_2.jpg" alt="">
+                    <div class=""></div>
+                    <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_3.jpg" alt="">
+                    <div class=""></div>
+                </li>
+                
             </ul>
         </div>
 
@@ -172,9 +178,9 @@
 
         }
         var _main = function() {
-            onclikChangeImg()
+            //onclikChangeImg()
             autoChangeImg()
-            addMask()
+            //addMask()
             displayAll()
         }
         _main()

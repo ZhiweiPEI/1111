@@ -15,8 +15,8 @@
             <div class="nav-con nav-con-right fl">
                 <ul>
                     <img class="fl"src="../../../img/index_img/imtLogo.png" height="35.99" class="face">
-                    <li><a href="">LOG IN</a></li>
-                    <li><a href="">LOG UP</a></li>
+                    <li><a href="../../login.php" target="a1">LOG IN</a></li>
+                    <li><a href="../../logup.php" target="a1">LOG UP</a></li>
                     <li><a href="">User Info</a></li>
                     <li><a href="">Message</a></li>
                     <li><a href="">History</a></li>

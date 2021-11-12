@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="../bootstrap/css/styles.css">
 </head>
 <body>
-    <iframe src="header.html" id="header"frameborder=0 width="100%" height="100%" scrolling="no"></iframe>
-    <iframe src="body.html" id="body" frameborder=0 width="100%" height="100%" scrolling="no"></iframe>
-    <iframe src="foot.html" id="foot" frameborder=0 width="100%" height="100%" scrolling="no"></iframe>
+    <iframe src="header.php" id="header"frameborder=0 width="100%" height="100%" scrolling="no"></iframe>
+    <iframe src="body.php" id="body" frameborder=0 width="100%" height="100%" scrolling="no"></iframe>
+    <iframe src="foot.php" id="foot" frameborder=0 width="100%" height="100%" scrolling="no"></iframe>
 </body>
 </html>
