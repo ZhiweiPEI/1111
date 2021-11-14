@@ -41,8 +41,7 @@
             <ul>
                 <li class="bili-wrapper-right-img">
                     <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_0.jpg" alt="">
-                    <div class="">我想变成男同
-                    </div>
+                    <div class=""></div>
                     <img class="" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_1.jpg" alt="">
                     <div class=""></div>
                 </li>
