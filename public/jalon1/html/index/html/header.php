@@ -18,7 +18,7 @@
                     <li><a href="../../login.php" target="a1">LOG IN</a></li>
                     <li><a href="../../logup.php" target="a1">LOG UP</a></li>
                     <li><a href="">User Info</a></li>
-                    <li><a href="">Message</a></li>
+                    <li><a href="../../user/favorite.php" target="a1">Favorite</a></li>
                     <li><a href="">History</a></li>
                 </ul>
             </div>
