@@ -15,10 +15,17 @@
             <div class="nav-con nav-con-right fl">
                 <ul>
                     <img class="fl"src="../../../img/index_img/imtLogo.png" height="35.99" class="face">
+<<<<<<< HEAD:public/jalon1/html/index/html/header.html
                     <li><a href="http://localhost:8080/jalon1/html/login.php">LOG IN</a></li>
                     <li><a href="http://localhost:8080/jalon1/html/logup.php">LOG UP</a></li>
                     <li><a href="http://localhost:8080/jalon1/html/user/index.php">User Info</a></li>
                     <li><a href="">Message</a></li>
+=======
+                    <li><a href="../../login.php" target="a1">LOG IN</a></li>
+                    <li><a href="../../logup.php" target="a1">LOG UP</a></li>
+                    <li><a href="">User Info</a></li>
+                    <li><a href="../../user/favorite.php" target="a1">Favorite</a></li>
+>>>>>>> 2759137e98ff72568d0a07f8e1a5bf84a1ca3fc2:public/jalon1/html/index/html/header.php
                     <li><a href="">History</a></li>
                 </ul>
             </div>
@@ -116,23 +123,23 @@
 
                 <li>
                     <a href="">
-                        <div class="nav-menu-bottom-img"><img src="../img/nav/square.png"></div>
+                        <div class="nav-menu-bottom-img"><img src="../../../img/nav/square.png"></div>
                         <div class="nav-name">HOT</div>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <div class="nav-menu-bottom-img"><img src="../img/nav/live.png"></div>
+                        <div class="nav-menu-bottom-img"><img src="../../../img/nav/live.png"></div>
                         <div class="nav-name">LIVE</div>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <div class="nav-menu-bottom-img"><img src="../img/nav/xiaoheiwu.png"></div>
+                        <div class="nav-menu-bottom-img"><img src="../../../img/nav/xiaoheiwu.png"></div>
                         <div class="nav-name">NEWS</div>
                     </a>
                 </li>
-                <img  class="fr" src="../img/nav/bysj.gif" width="69px" height="40px"alt="">
+                <img  class="fr" src="../../../img/nav/bysj.gif" width="69px" height="40px"alt="">
             </ul>
         </div>
     </div>

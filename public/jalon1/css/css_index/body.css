@@ -1,8 +1,9 @@
 .bili-wrapper {
-    padding-bottom: 40px;
+    padding-bottom: 4px;
 }
 .bili-wrapper-left {
-    width: 440px;
+    float: left;
+    width: 30%;
     height: 220px;
 }
 .bili-wrapper-left p {
@@ -19,9 +20,20 @@
     left: 380px;
     display: none;
 }
-.bili-wrapper-right {
-    width: 550px;
+.bili-right-info{
+    float: right;
+    width: 70%;
     height: 220px;
+
+}
+.bili-wrapper-right {
+    width: auto;
+    height: auto;
+}
+.bili-wrapper-right-img{
+    width:270px;
+    height:180px;
+    display:inline-table;
 }
 
 .on {

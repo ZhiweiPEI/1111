@@ -11,23 +11,22 @@
 </head>
 <body>
     <div class="bili-wrapper">
-        <div class="bili-wrapper-left  fl ">
+        <div class="bili-wrapper-left f1">
             <div data-index="0" class="lazy-img on">
-                <img src="../img/viewpage/viewpager_0.jpg" width="440px" height="220px" alt="">
+                <img src="../../../img/viewpage/viewpager_0.jpg" width="440px" height="220px" alt="">
             </div>
             <div data-index="1" class="lazy-img off">
-                <img src="../img/viewpage/viewpager_1.jpg" width="440px" height="220px" alt="">
+                <img src="../../../img/viewpage/viewpager_1.jpg" width="440px" height="220px" alt="">
             </div>
             <div data-index="2" class="lazy-img off">
-                <img src="../img/viewpage/viewpager_2.jpg" width="440px" height="220px" alt="">
+                <img src="../../../img/viewpage/viewpager_2.jpg" width="440px" height="220px" alt="">
             </div>
             <div data-index="3" class="lazy-img off">
-                <img src="../img/viewpage/viewpager_3.jpg" width="440px" height="220px" alt="">
+                <img src="../../../img/viewpage/viewpager_3.jpg" width="440px" height="220px" alt="">
             </div>
             <div data-index="4" class="lazy-img off">
-                <img src="../img/viewpage/viewpager_4.jpg" width="440px" height="220px" alt="">
+                <img src="../../../img/viewpage/viewpager_4.jpg" width="440px" height="220px" alt="">
             </div>
-
             <ul class="trigger">
                 <li data-index='0' class="trigger-on"></li>
                 <li data-index='1'class="trigger-off"></li>
@@ -37,34 +36,40 @@
             </ul>
         
         </div>
+        <div class="bili-right-info">This is a good movie site</div>
         <div class="bili-wrapper-right  fl ">
             <ul>
                 <li class="bili-wrapper-right-img">
-                    <img class="" src="../img/bili-wrapper-right/bili-wrapper-right-img_0.jpg" alt="">
+                    <img class="bili-wrapper-right-img" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_0.jpg" alt="">
+                    <div class=""> </div>
+                    <img class="bili-wrapper-right-img" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_1.jpg" alt="">
                     <div class=""></div>
                 </li>
-                <li class="bili-wrapper-right-img ">
-                    <img class="" src="../img/bili-wrapper-right/bili-wrapper-right-img_1.jpg" alt="">
+                <li class="bili-wrapper-right-img">
+                    <img class="bili-wrapper-right-img" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_2.jpg" alt="">
+                    <div class=""></div>
+                    <img class="bili-wrapper-right-img" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_3.jpg" alt="">
                     <div class=""></div>
                 </li>
-                <li class="bili-wrapper-right-img ">
-                    <img class="" src="../img/bili-wrapper-right/bili-wrapper-right-img_2.jpg" alt="">
+                <li class="bili-wrapper-right-img">
+                    <img class="bili-wrapper-right-img" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_4.jpg" alt="">
                     <div class=""></div>
-
-                </li>
-                <li class="bili-wrapper-right-img ">
-                    <img class="" src="../img/bili-wrapper-right/bili-wrapper-right-img_3.jpg" alt="">
+                    <img class="bili-wrapper-right-img" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_5.jpg" alt="">
                     <div class=""></div>
                 </li>
-                <li class="bili-wrapper-right-img ">
-                    <img class="" src="../img/bili-wrapper-right/bili-wrapper-right-img_4.jpg" alt="">
+                <li class="bili-wrapper-right-img">
+                    <img class="bili-wrapper-right-img" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_0.jpg" alt="">
+                    <div class=""></div>
+                    <img class="bili-wrapper-right-img" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_1.jpg" alt="">
                     <div class=""></div>
                 </li>
-                <li class="bili-wrapper-right-img ">
-                    <img class="" src="../img/bili-wrapper-right/bili-wrapper-right-img_5.jpg" alt="">
+                <li class="bili-wrapper-right-img">
+                    <img class="bili-wrapper-right-img" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_2.jpg" alt="">
+                    <div class=""></div>
+                    <img class="bili-wrapper-right-img" src="../../../img/bili-wrapper-right/bili-wrapper-right-img_3.jpg" alt="">
                     <div class=""></div>
                 </li>
-
+                
             </ul>
         </div>
 
@@ -172,9 +177,9 @@
 
         }
         var _main = function() {
-            onclikChangeImg()
+            //onclikChangeImg()
             autoChangeImg()
-            addMask()
+            //addMask()
             displayAll()
         }
         _main()
