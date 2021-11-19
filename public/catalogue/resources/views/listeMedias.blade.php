@@ -7,7 +7,7 @@
   <body>
       <p>Media1</p>
       <?php
-      echo $type;
+      echo $type."<br>";
       echo $annee;
       ?>
   </body>
