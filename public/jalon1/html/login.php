@@ -30,7 +30,7 @@
                         <label for="checkbox1"></label>
                     </div>
                     <span class="text">Remember me</span>
-                    <button type="submit" class="btn btn-default">Login</button>
+                    <button type="submit" class="btn btn-default" onclick="sendForm()">Login</button>
                 </div>
             </form>
         </div>
@@ -46,4 +46,27 @@
 </div>
 
 </body>
+
+<script>
+
+    function getSearchData() {
+    return {
+        email: $("#inputEmail3").val(),
+        password: $("#inputPassword3").val()
+        };
+    }
+
+    function sendForm(){
+        $.ajax({
+        url: 'http://localhost:8080/catalogue/public/index.php/user/test4',
+        data: getSearchData(),
+        type: 'post',
+        dataType: 'json',
+        success: function (data) {
+            console.log("bon!");
+        }
+    });
+    }
+</script>
+
 </html>
