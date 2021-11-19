@@ -1,9 +1,13 @@
 <?php
 
+<<<<<<< HEAD
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+=======
+use Illuminate\Support\Facades\Route;
+>>>>>>> cc8cd18d94db412be6c44d219ee343af42ad1b36
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +21,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
+<<<<<<< HEAD
     return "hello world";
 });
 
@@ -32,3 +37,29 @@ Route::prefix('user') -> group(function(){
     Route::get('update', 'App\Http\Controllers\UserController@update');
     Route::get('select', 'App\Http\Controllers\UserController@select');
 });
+=======
+    return "hello";
+});
+//两个参数
+Route::get('user/{nom}/{prenom}', function ($nom,$prenom) {
+    return 'prenom: '.$prenom . '  nom: '. $nom;
+});
+//正则表达式
+Route::get('title/{slug}', function ($slug) {
+    return $slug;
+})->where(['slug' => '[A-Za-z]+']);
+//重定向
+Route::get('/listeFilms',function(){
+    return 'Liste de Films';
+});
+
+Route::get('/test', function () {
+    return view('test');
+})->name('teest');
+
+//demo controller
+Route::get('/listeMedias', 'App\Http\controllers\listeMediasController@getListeMedias');
+
+Route::get('/listeMediasWithElements/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMediasWithElements');
+
+>>>>>>> cc8cd18d94db412be6c44d219ee343af42ad1b36
