@@ -38,23 +38,16 @@
             return $email . " " . $password;
         }
 
-        public function add(){
+        public function add(Request $request){
+            $name = $request -> input('name');
+            $email = $request -> input('email');
+            $telephone = $request -> input('tel');
             $db = DB::table('user');
             $rst = $db -> insert([
                 [
-                    'name' => 'FeiFan',
-                    'email' => 'feifan@gmail.com',
-                    'telephone' => '1234567890'
-                ],
-                [
-                    'name' => 'FeiFanFan',
-                    'email' => 'feifanfan@gmail.com',
-                    'telephone' => '1234567890'
-                ],
-                [
-                    'name' => 'FeiFeiFan',
-                    'email' => 'feifeifan@gmail.com',
-                    'telephone' => '1234567890'
+                    'name' => $name,
+                    'email' => $email,
+                    'telephone' => $telephone
                 ]
             ]);
             dd($rst);

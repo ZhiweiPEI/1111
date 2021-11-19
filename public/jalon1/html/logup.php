@@ -14,14 +14,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-offset-3 col-md-6">
-            <form class="form-horizontal">
+            <form class="form-horizontal" action='http://localhost:8080/catalogue/public/index.php/user/add' method="POST">
                 <span class="heading">LOG UP</span>
                 <table>
                     <tr>
                         <td>Username:</td>
                         <td>
                             <div class="form-group">
-                            <input type="text" class="form-control" id="inputUsername3" placeholder="Username">
+                            <input type="text" class="form-control" id="inputUsername3" placeholder="Username" name="name">
                             <i class="fa fa-lock"></i>
                             <a href="#" class="fa fa-question-circle"></a>
                             </div>
@@ -31,7 +31,7 @@
                         <td>Password:</td>
                         <td>
                             <div class="form-group">
-                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password" name="password">
                             <i class="fa fa-lock"></i>
                             <a href="#" class="fa fa-question-circle"></a>
                             </div>
@@ -41,7 +41,7 @@
                         <td>Email:</td>
                         <td>
                             <div class="form-group">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email">
                             <i class="fa fa-user"></i>
                             </div>
                         </td>
@@ -50,7 +50,7 @@
                         <td>Number Tel:</td>
                         <td>
                             <div class="form-group">
-                            <input type="text" class="form-control" id="inputNumber3" placeholder="Telephone Number">
+                            <input type="text" class="form-control" id="inputNumber3" placeholder="Telephone Number" name="tel">
                             <i class="fa fa-lock"></i>
                             <a href="#" class="fa fa-question-circle"></a>
                             </div>
@@ -60,7 +60,7 @@
                         <td>Code:</td>
                         <td>
                             <div class="form-group">
-                            <input type="text" class="form-control" id="inputCoder3" placeholder="Code">
+                            <input type="text" class="form-control" id="inputCoder3" placeholder="Code" name="code">
                             <i class="fa fa-lock"></i>
                             <a href="#" class="fa fa-question-circle"></a>
                             </div>
