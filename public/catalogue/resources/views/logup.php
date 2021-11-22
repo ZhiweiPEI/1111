@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8"> 
 	<title>Login</title>
-    <link rel="stylesheet" href="../css/logup.css"> 
+    <link rel="stylesheet" href='{{asset("css/logup.css")}}'> 
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="../js/user/logup.js"></script>
+    <script src='{{asset("js/logup.js")}}'></script>
 </head>
 <body>
 

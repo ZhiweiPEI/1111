@@ -20,7 +20,7 @@ namespace App\Http\Controllers;
     */
 
     Route::get('/', function () {
-        return "hello world";
+        return view('logup');
     });
 
     Route::prefix('user') -> group(function(){
@@ -72,6 +72,7 @@ namespace App\Http\Controllers;
 
     Route::get('/listeMediasWithElements/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMediasWithElements');
 
+    //auth
     Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
