@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
 
         <!-- Scripts -->
-        <script src="{{ asset(mix('css/app.js')) }}" defer></script>
+        <script src="{{ asset(mix('js/app.js')) }}" defer></script>
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">

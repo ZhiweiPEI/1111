@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
     use App\Http\Controllers\UserController;
     use App\Http\Controllers\listeMediasController;
     use App\Http\Controllers\CategoryController;
+    use Laravel\Fortify\Http\Controllers\RegisteredUserController;
 
 
     /*
@@ -23,9 +24,9 @@ namespace App\Http\Controllers;
         return view('welcome');
     });
 
-    Route::get('/register', function () {
-        return view('logup');
-    }) -> name('register');
+    // Route::get('/register', function () {
+    //     return view('logup');
+    // }) -> name('register');
 
     Route::prefix('user') -> group(function(){
         Route::get('test1', function(){
@@ -81,9 +82,9 @@ namespace App\Http\Controllers;
         return view('dashboard');
     })->name('dashboard');
 
-        // //register
-        // Route::get('/register', [RegisteredUserController::class, 'create'])
-        // ->middleware(['guest'])
-        // ->name('register');
+     //register
+    Route::get('/register', [RegisteredUserController::class, 'create'])
+    ->middleware(['guest'])
+    ->name('register');
 
 ?>
