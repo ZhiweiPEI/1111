@@ -71,4 +71,8 @@ namespace App\Http\Controllers;
     Route::get('/listeMedias', 'App\Http\controllers\listeMediasController@getListeMedias');
 
     Route::get('/listeMediasWithElements/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMediasWithElements');
+
+    Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 ?>
