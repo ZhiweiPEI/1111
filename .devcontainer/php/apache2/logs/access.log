@@ -8193,3 +8193,10 @@
 172.20.0.1 - - [19/Nov/2021:16:28:56 +0000] "GET /jalon1/html/index/html/body.php HTTP/1.1" 200 1692 "http://localhost:8080/jalon1/html/index/html/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
 172.20.0.1 - - [19/Nov/2021:16:28:56 +0000] "GET /jalon1/html/index/html/foot.php HTTP/1.1" 200 978 "http://localhost:8080/jalon1/html/index/html/index.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
 >>>>>>> aa98f063b4eb5786bf78356268d7d7bbbc7ecb42
+172.19.0.1 - - [22/Nov/2021:15:18:23 +0000] "GET /jalon1/ HTTP/1.1" 200 774 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
+172.19.0.1 - - [22/Nov/2021:15:18:28 +0000] "GET /jalon1/html/ HTTP/1.1" 200 807 "http://localhost:8080/jalon1/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
+172.19.0.1 - - [22/Nov/2021:15:18:30 +0000] "GET /jalon1/html/user/ HTTP/1.1" 200 1103 "http://localhost:8080/jalon1/html/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
+172.19.0.1 - - [22/Nov/2021:15:19:18 +0000] "-" 408 0 "-" "-"
+172.19.0.1 - - [22/Nov/2021:15:20:08 +0000] "-" 408 0 "-" "-"
+172.19.0.1 - - [22/Nov/2021:15:24:10 +0000] "-" 408 0 "-" "-"
+172.19.0.1 - - [22/Nov/2021:15:24:10 +0000] "-" 408 0 "-" "-"

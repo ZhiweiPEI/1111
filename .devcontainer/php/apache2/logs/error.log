@@ -2780,3 +2780,10 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Fri Nov 19 16:28:56.208582 2021] [php:notice] [pid 341] [client 172.20.0.1:58470] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.20.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost:8080/jalon1/html/index/html/index.php
 [Fri Nov 19 16:28:56.209051 2021] [php:notice] [pid 22] [client 172.20.0.1:58480] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.20.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost:8080/jalon1/html/index/html/index.php
 >>>>>>> aa98f063b4eb5786bf78356268d7d7bbbc7ecb42
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Nov 22 15:04:23.927118 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/8.0.12 configured -- resuming normal operations
+[Mon Nov 22 15:04:23.928007 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Nov 22 15:06:55.614393 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/8.0.13 configured -- resuming normal operations
+[Mon Nov 22 15:06:55.615799 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Nov 22 15:18:30.577810 2021] [php:notice] [pid 18] [client 172.19.0.1:57316] Xdebug: [Step Debug] Could not connect to debugging client. Tried: 172.19.0.1:9003 (from REMOTE_ADDR HTTP header), localhost:9003 (fallback through xdebug.client_host/xdebug.client_port) :-(, referer: http://localhost:8080/jalon1/html/

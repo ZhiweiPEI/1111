@@ -19,9 +19,13 @@ namespace App\Http\Controllers;
     |
     */
 
-    Route::get('/', function () {
-        return view('logup');
+    Route::get('/home', function () {
+        return view('welcome');
     });
+
+    Route::get('/register', function () {
+        return view('logup');
+    }) -> name('register');
 
     Route::prefix('user') -> group(function(){
         Route::get('test1', function(){
@@ -76,4 +80,10 @@ namespace App\Http\Controllers;
     Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+        // //register
+        // Route::get('/register', [RegisteredUserController::class, 'create'])
+        // ->middleware(['guest'])
+        // ->name('register');
+
 ?>
