@@ -8,7 +8,13 @@
     </head>
     <body>
         <p> avant le script </p>
-        <script src="./js/number_two.js"></script>
+        <p id="demo"></p>
+        <script>
+            function myFunction() {
+	            alert("Number two");
+            }
+            document.getElementById("demo").innerHTML = myFunction();
+        </script>
         <script src="./js/number_one.js"></script>
         <script src="./js/number_zero.js"></script>
         <p> après le script </p>
