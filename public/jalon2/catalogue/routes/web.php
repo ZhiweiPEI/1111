@@ -20,7 +20,7 @@ namespace App\Http\Controllers;
     */
 
     Route::get('/', function () {
-        return view('logup');
+        return view('index');
     });
 
     Route::prefix('user') -> group(function(){

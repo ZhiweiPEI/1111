@@ -1,0 +1,45 @@
+.bili-wrapper {
+    padding-bottom: 4px;
+}
+.bili-wrapper-left {
+    float: left;
+    width: 30%;
+    height: 220px;
+}
+.bili-wrapper-left p {
+    background: rgba(0,0,0,.64);
+    width: 50px;
+    height: 24px;
+    text-align: center;
+    border-radius: 4px;
+    transition: all .2s linear;
+    font-size: 14px;
+    color: white;
+    position: relative;
+    top: -60px;
+    left: 380px;
+    display: none;
+}
+.bili-right-info{
+    float: right;
+    width: 70%;
+    height: 220px;
+
+}
+.bili-wrapper-right {
+    width: auto;
+    height: auto;
+}
+.bili-wrapper-right-img{
+    width:270px;
+    height:180px;
+    display:inline-table;
+}
+
+.on {
+    display: block;
+}
+
+.off {
+    display: none;
+}
