@@ -1,29 +1,22 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
 use DB;
 
 class FilmController extends Controller
 {
-    public function add(){
+    public function add(Request $request){
+        $name = $request -> input('name');
+        $director = $request -> input('director');
+        $category = $request -> input('category');
         $db = DB::table('film');
         $rst = $db -> insert([
             [
-                'name' => 'The Shawshank Redemption',
-                'director' => 'FEI Fan',
-                'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s"),
-            ],
-            [
-                'name' => 'The Godfathern',
-                'director' => 'FEI Fan',
-                'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s"),
-            ],
-            [
-                'name' => 'Schindlers List',
-                'director' => 'FEI Fan',
+                'name' => $name,
+                'director' => $director,
+                'category_id' => $category,
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s"),
             ]
@@ -31,12 +24,17 @@ class FilmController extends Controller
         dd($rst);
     }
 
-    public function update(){
+    public function update(Request $request){
+        $name = $request -> input('name');
+        $director = $request -> input('director');
+        $category = $request -> input('category');
         $db = DB::table('film');
-        $rst = $db -> where('id','=','1') -> update([  
-            'name' => 'Test Update',                  
-            'director' => 'Zhiwei',
-            'updated_at' => date("Y-m-d H:i:s"),
+        $rst = $db -> where('name','=',$name) -> update([  
+                'name' => $name,
+                'director' => $director,
+                'category_id' => $category,
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s"),
         ]);
         dd($rst);
     }
@@ -47,9 +45,18 @@ class FilmController extends Controller
         dd($rst);
     }
 
-    public function del(){
+    public function findByName(Request $request){
+        $name = $request -> input('name');
         $db = DB::table('film');
-        $rst = $db -> where('id','=','9') -> delete();
+        $rst = $db -> where('name', '=', $name) -> get();
+        // return view('filmupdate');
+        echo($rst);
+    }
+
+    public function del(Request $request){
+        $name = $request -> input('name');
+        $db = DB::table('film');
+        $rst = $db -> where('name','=',$name) -> delete();
         dd($rst);
     }
   

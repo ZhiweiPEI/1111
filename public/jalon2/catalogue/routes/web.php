@@ -27,9 +27,25 @@ namespace App\Http\Controllers;
         return view('welcome');
     });
 
-    Route::get('/main', function () {
-        return view('index');
+    Route::get('/filmadd', function () {
+        return view('filmadd');
     });
+
+    Route::get('/filmfind', function () {
+        return view('filmfindbyid');
+    });
+
+    Route::post('/filmupdate', function () {
+        return view('filmupdate');
+    });
+
+    Route::get('/filmdel', function () {
+        return view('filmdel');
+    });
+
+    // Route::get('/main', function () {
+    //     return view('index');
+    // });
 
     Route::prefix('user') -> group(function(){
         Route::get('test1', function(){
@@ -45,10 +61,11 @@ namespace App\Http\Controllers;
     });
 
     Route::prefix('film') -> group(function(){
-        Route::get('add', 'App\Http\Controllers\FilmController@add');
-        Route::get('del', 'App\Http\Controllers\FilmController@del');
-        Route::get('update', 'App\Http\Controllers\FilmController@update');
+        Route::post('add', 'App\Http\Controllers\FilmController@add');
+        Route::post('del', 'App\Http\Controllers\FilmController@del');
+        Route::post('update', 'App\Http\Controllers\FilmController@update');
         Route::get('select', 'App\Http\Controllers\FilmController@select');
+        Route::post('findByName', 'App\Http\Controllers\FilmController@findByName');
     });
 
     Route::prefix('category') -> group(function(){
