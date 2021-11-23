@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
     use App\Http\Controllers\UserController;
     use App\Http\Controllers\listeMediasController;
     use App\Http\Controllers\CategoryController;
+    use Laravel\Fortify\Http\Controllers\RegisteredUserController;
+    use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 
     /*
@@ -21,6 +23,10 @@ namespace App\Http\Controllers;
 
     Route::get('/', function () {
         return view('index');
+    });
+
+    Route::get('/home', function () {
+        return view('welcome');
     });
 
     Route::prefix('user') -> group(function(){
@@ -76,4 +82,14 @@ namespace App\Http\Controllers;
     Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    //registre
+    Route::get('/register', [RegisteredUserController::class, 'create'])
+    ->middleware(['guest'])
+    ->name('register');
+    
+    //log in
+    Route::get('/login', [AuthenticatedSessionController::class, 'create'])
+    ->middleware(['guest'])
+    ->name('login');
+    
 ?>
