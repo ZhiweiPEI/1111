@@ -1,0 +1,171 @@
+.all{
+    margin-top: 0px;
+    background-color: aliceblue;
+}
+
+.header{
+    background-size: 100% 100%;
+    background-image: url("../../img/index_img/headerBackground.png");
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.header_center{
+    width: 60%;
+}
+
+.header01{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+}
+
+.header01_4{
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+}
+
+.name{
+    color: orange;
+}
+
+.name>p{
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.contact{
+    color: orange;
+    margin-left: 60px;
+}
+
+.email{
+    margin-left: 10px;
+    color: orange;
+}
+
+.tele{
+    margin-left: 10px;
+    color: orange   ;
+}
+
+.profile>img{
+    margin-top: 15px;
+    margin-left: 75px;
+    border-radius:50%; 
+    overflow: hidden;
+}
+
+.upload{
+    margin-left: 60px;
+    margin-top: 100px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.content_center{
+    width: 60%;
+}
+
+.content_top{
+    display: flex;
+    border-bottom: pink solid;
+}
+
+.content_top div{
+    font-size: 30px;
+    width: 30%;
+    margin: 20px;
+    text-align: center;
+    color: pink;
+    height: 40px;
+    line-height: 40px;
+}
+
+.content_top div:hover{
+    height: 40px;
+    width: 30%;
+    background-color: pink;
+    color: white;
+    line-height: 40px;
+}
+
+.content_mid>div{
+    display: flex;
+    border-bottom: gray dashed;
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.content_mid>div>div{
+    margin-left: 10px;
+}
+
+.content_mid>div>div:nth-child(1){
+    color: gray;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.content_mid>div>div:nth-child(3) {
+    color: gray;
+    font-size: 12px;
+}
+
+.content_mid a{
+    color: black;
+}
+
+.content_bottom{
+    display: flex;
+    justify-content: center;
+}
+
+.content_bottom>div{
+    border: gray solid 1px;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 30px 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.content_bottom>div:nth-child(2){
+    background-color: pink;
+    color: white;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
+
+.footer_center{
+    width: 80%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.footer_center a{
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    width: 100px;
+    display: inline-block;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
