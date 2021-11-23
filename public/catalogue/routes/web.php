@@ -7,7 +7,7 @@ namespace App\Http\Controllers;
     use App\Http\Controllers\listeMediasController;
     use App\Http\Controllers\CategoryController;
     use Laravel\Fortify\Http\Controllers\RegisteredUserController;
-
+    use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
     /*
     |--------------------------------------------------------------------------
@@ -87,4 +87,8 @@ namespace App\Http\Controllers;
     ->middleware(['guest'])
     ->name('register');
 
+    //login
+    Route::get('/login', [AuthenticatedSessionController::class, 'create'])
+    ->middleware(['guest'])
+    ->name('login');
 ?>
