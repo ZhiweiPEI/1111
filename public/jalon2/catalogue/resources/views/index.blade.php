@@ -24,11 +24,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.blade.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.blade.php">log in</a></li>
-                        <li class="nav-item"><a class="nav-link" href="logup.blade.php">log up</a></li>
-                        <li class="nav-item"><a class="nav-link" href="user/index.blade.php">User info</a></li>
-                        <li class="nav-item"><a class="nav-link" href="user/favorite.blade.php">favorite</a></li>
+                    
+                        @if (Route::has('login'))
+
+        @auth
+            <li class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link">Logout</a></li>
+        @else
+        <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
+
+            @if (Route::has('register'))
+                <li class="nav-item"><a href="{{ route('register') }}" class="nav-link"  >Register</a></li>
+            @endif
+        @endif
+    </div>
+@endif
                         
+                        <!-- <li class="nav-item"><a class="nav-link" href="user/index.blade.php">User info</a></li>
+                        <li class="nav-item"><a class="nav-link" href="user/favorite.blade.php">favorite</a></li>
+                         -->
+
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
