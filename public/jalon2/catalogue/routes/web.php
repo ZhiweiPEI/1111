@@ -27,6 +27,10 @@ namespace App\Http\Controllers;
         return view('welcome');
     });
 
+    Route::get('/favorite', function () {
+        return view('favorite');
+    });
+
     Route::get('/filmadd', function () {
         return view('filmadd');
     });
