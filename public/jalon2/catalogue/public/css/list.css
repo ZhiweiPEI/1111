@@ -1,4 +1,5 @@
 header {
+    
     position: relative;
     background-color: black;
     height: 75vh;
@@ -50,4 +51,22 @@ header {
     header video {
       display: none;
     }
+  }
+
+
+  .body{
+    text-align:center;
+  }
+  .table{
+    margin:auto;
+  }
+
+  .carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
