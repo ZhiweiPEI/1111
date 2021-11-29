@@ -42,7 +42,7 @@ class FilmController extends Controller
     public function select(){
         $db = DB::table('film');
         $rst = $db -> get();
-        dd($rst);
+        echo($rst);
     }
 
     public function findByName(Request $request){
