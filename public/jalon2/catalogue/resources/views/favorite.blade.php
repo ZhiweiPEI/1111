@@ -11,20 +11,14 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="">Home</a>
+          <a class="nav-link" href="{{ url('/') }}">Home</a>
         </li>
-        <li class="nav-item">
-            <a href="{{ url('/dashboard') }}" class="nav-link">Manage account</a>
-        </li>
-        <li class="nav-item">
-            <a href="{{ url('/favorite') }}" class="nav-link">Favorite</a>
-        </li>
-        <li class="nav-item">
-            <a href="{{ url('/favorite') }}" class="nav-link">Histroy</a>
-        </li>
-        <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">PlayLisT</a></li>
-        <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">ViewedList</a></li>
-        <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">Message</a></li>
+        <li class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link">Manage account</a></li>
+            <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">Favorite</a></li>
+            <li class="nav-item"><a href="{{ url('/histroy') }}" class="nav-link">Histroy</a></li>
+            <li class="nav-item"><a href="{{ url('/playList') }}" class="nav-link">PlayList</a></li>
+            <li class="nav-item"><a href="{{ url('/viewedList') }}" class="nav-link">ViewedList</a></li>
+            <li class="nav-item"><a href="{{ url('/message') }}" class="nav-link">Message</a></li>
       </ul>
     </div>
   </div>
@@ -70,7 +64,7 @@
 
 
 <body>
-  <table style="width:100%"  class="table table-sm">
+  <table style="width:90%"  class="table table-sm">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -120,4 +114,117 @@
     </tbody>
   </table>
 </body>
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row">
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-12 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(78).jpg" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(79).jpg" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-12 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(81).jpg" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(82).jpg" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(84).jpg" class="img-fluid"
+            alt="">
+          <a href="">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2022 IMT-nord-europe
+    
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 </html>

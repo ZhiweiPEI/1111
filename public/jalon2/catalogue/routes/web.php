@@ -31,6 +31,18 @@ namespace App\Http\Controllers;
         return view('favorite');
     });
 
+    Route::get('/histroy', function () {
+        return view('histroy');
+    });
+
+    Route::get('/viewedList', function () {
+        return view('viewedList');
+    });
+
+    Route::get('/playList', function () {
+        return view('playList');
+    });
+
     Route::get('/filmadd', function () {
         return view('filmadd');
     });
