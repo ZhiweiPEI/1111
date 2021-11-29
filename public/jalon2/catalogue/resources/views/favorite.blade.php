@@ -1,9 +1,15 @@
 <html>
+<link href="{{asset('css/styles.css') }}" rel="stylesheet" />
 <head>
   <link rel="stylesheet" type="text/css" href="thstronge.css">
 </head>
 <header>
-  <h1>Gabriel's List of Favorite movies</h1>
+<div class="page-header">
+    <h1>Favorite Films
+        <small>best movie site for you</small>
+    </h1>
+</div>
+<p>You can see the information of your favorite movies here</p>
 </header>
 <body>
   <table style="width:100%">
@@ -21,7 +27,7 @@
     </tr>
     <tr>
         <td><strong>Children of Men</strong></td>
-        <td><img src="http://www.ssninsider.com/wp-content/uploads/2013/04/Children-of-Men-Poster-215x300.jpg" height="250" width="175"/></td>
+        <td><img src="https://m.media-amazon.com/images/M/MV5BMTY0NTQ1NjA0OV5BMl5BanBnXkFtZTgwMDg5NjkzMTE@._V1_UX67_CR0,0,67,98_AL_.jpg" height="250" width="175"/></td>
         <td><a href="http://www.imdb.com/title/tt1714915/">About me!</a></td>
         <td>An end of the world thriller with political overtones and a dystopic bleakness</td>
         <td>Clive Owen, Juliette Moore, Michael Caine</td>
