@@ -19,11 +19,11 @@ function setData(data) {
     var html = "";
     for(let i = 0; i < 8; i++){
         html += '<tr>'+
-        '<td><strong>' + data[i].name + '</strong></td>'+
-        '<td><img src="' + data[i].image + '" height="250" width="175"/></td>'+
-        '<td>' + data[i].director + '</td>'+
-        '<td>' + data[i].description + '</td>'+
-        '<td>' + data[i].actor+ '</td>'+
+        '<th scope="row"><strong>'+data[i].name+'</strong></th>'+
+        '<td><img src="'+data[i].image+'" height="200" width="300"/></td>'+
+        '<td>'+data[i].director+'</td>'+
+        '<td>'+data[i].description+'</td>'+
+        '<td>'+data[i].actor+'</td>'+
     '</tr>';
     }
     $("#content").html(html);
