@@ -28,7 +28,12 @@
                         @if (Route::has('login'))
 
         @auth
-            <li class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link">Logout</a></li>
+            <li class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link">Manage account</a></li>
+            <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">Favorite</a></li>
+            <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">Histroy</a></li>
+            <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">PlayLisT</a></li>
+            <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">ViewedList</a></li>
+            <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">Message</a></li>
         @else
         <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
 
