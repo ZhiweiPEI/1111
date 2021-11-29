@@ -43,6 +43,11 @@ namespace App\Http\Controllers;
         return view('playList');
     });
 
+    Route::get('/filmInfo', function () {
+        return view('filmInfo');
+    });
+
+
     Route::get('/filmadd', function () {
         return view('filmadd');
     });
