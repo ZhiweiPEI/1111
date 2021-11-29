@@ -11,7 +11,7 @@ function findByName() {
         type: 'post',
         dataType: 'json',
         success: function (data) {
-            console.log(data[0]);
+            console.log(data);
             setData(data[0]);
         }
     });
