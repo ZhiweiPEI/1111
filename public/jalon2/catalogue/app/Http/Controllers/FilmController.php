@@ -62,7 +62,13 @@ class FilmController extends Controller
   
     public function findFavorites(Request $request){
         $email = $request -> input('email');
-        $rst = DB::table("users") -> where("email","=",$email) -> get();
+        $rst = DB::table("film")
+            -> rightJoin("film_playlist_relation","film.id","=","film_playlist_relation.film_id")
+            -> leftJoin("playlists","playlists.id","=","film_playlist_relation.playlist_id")
+            -> leftJoin("user_playlist_relation","playlists.id","=","user_playlist_relation.playlist_id")
+            -> leftJoin("users","users.id","=","user_playlist_relation.user_id")
+            -> where("users.email","=",$email) -> andWhere("playlists.name","=","J'aime")
+            -> get();
         // return view('filmupdate');
         echo($rst);
     }
