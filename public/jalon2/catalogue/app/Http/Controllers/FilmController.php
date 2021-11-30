@@ -66,5 +66,13 @@ class FilmController extends Controller
         // return view('filmupdate');
         echo($rst);
     }
+
+    public function selectById(Request $request){
+        $name = $request -> input('id');
+        $db = DB::table('film');
+        $rst = $db -> where('id', '=', $name) -> get();
+        // return view('filmupdate');
+        echo($rst);
+    }
 }
 ?>

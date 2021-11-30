@@ -10,6 +10,7 @@
         <script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/film/filmInfo.js"></script>
 		<link href="{{asset('css/styles.css') }}" rel="stylesheet" />
 <link href="{{asset('css/list.css') }}" rel="stylesheet" />
 
@@ -65,37 +66,8 @@
 				</div> <!-- .container -->
 			</div> <!-- .hero -->
 
-			<main class="main-content">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-4 pad-right">
-							<h2 class="section-title">film information</h2>
-							<p>Assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus.</p>
-						</div> <!-- .column -->
-
-						<div class="col-sm-4">
-							<video src="#" poster="img/images/cover.png">
-							</video>
-						</div> <!-- .column -->
-
-						<div class="col-sm-4 right-aligned  pad-left">
-							<h2 class="section-title">Why choose this film?</h2>
-							<p>Oluptatem sequi nesciunt porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit labore dolore.</p>
-						</div> <!-- .column -->
-
-					</div> <!-- .row -->
-
-					<blockquote>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos atque harum tenetur consequatur officiis dolorem, dolor dolore autem fugit, esse porro doloribus ipsum, alias asperiores quidem ex corrupti vel dolores.</p>
-					</blockquote>
-					<form action="#" class="subscribe-form">
-						<div class="control">
-							<i class="fa fa-envelope"></i>
-							<input type="email" placeholder="Enter your email">
-							<input type="submit" value="Subscribe" class="button orange">
-						</div>
-					</form> <!-- .subscribe-form -->
-				</div>
+			<main class="main-content" id = "content">
+				
 				
 			</main> <!-- .main-content -->
 
