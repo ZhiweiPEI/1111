@@ -7,6 +7,7 @@
     <link href="{{asset('css/styles.css') }}" rel="stylesheet" />   
     <link href="{{asset('css/list.css') }}" rel="stylesheet" />
 </head>
+
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container">

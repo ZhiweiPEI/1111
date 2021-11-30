@@ -7,7 +7,7 @@ function findAll() {
     console.log(email);
     $.ajax({
         url: 'http://localhost:8080/jalon2/catalogue/public/index.php/film/select',
-        data: {email: email},
+        data: {},
         type: 'get',
         dataType: 'json',
         success: function (data) {

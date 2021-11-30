@@ -60,5 +60,11 @@ class FilmController extends Controller
         dd($rst);
     }
   
+    public function findFavorites(Request $request){
+        $email = $request -> input('email');
+        $rst = DB::table("users") -> where("email","=",$email) -> get();
+        // return view('filmupdate');
+        echo($rst);
+    }
 }
 ?>
