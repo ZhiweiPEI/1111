@@ -10,12 +10,37 @@
         <script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/app.js"></script>
+		<link href="{{asset('css/styles.css') }}" rel="stylesheet" />
+<link href="{{asset('css/list.css') }}" rel="stylesheet" />
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Your favorite films</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url('/') }}">Home</a>
+        </li>
+        <li class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link">Manage account</a></li>
+            <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">Favorite</a></li>
+            <li class="nav-item"><a href="{{ url('/histroy') }}" class="nav-link">Histroy</a></li>
+            <li class="nav-item"><a href="{{ url('/playList') }}" class="nav-link">PlayList</a></li>
+            <li class="nav-item"><a href="{{ url('/viewedList') }}" class="nav-link">ViewedList</a></li>
+            <li class="nav-item"><a href="{{ url('/message') }}" class="nav-link">Message</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Brand</title>
+		<title>LOGO</title>
 
 
 		
@@ -34,16 +59,9 @@
 				<div class="container">
 					<a href="#" class="logo"><img src="img/images/logo.png" alt="Brand California"></a>
 
-					<h1 class="hero-title">Transformation. <br>Stay tuned.</h1>
-					<p>Accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos occaecati cupiditate.</p>
+					<h1 class="hero-title">The best movie website <br>For you</h1>
+					<p>Provide free movie and drama streaming service, including TV dramas, variety shows, movies, documentaries and other high-definition movies, including action movies, science fiction movies, comedies, dramas, war movies, romantic movies, costume dramas, the latest European and American dramas, and midnight Video, watching the video will not freeze, the page is simple and no ads. All popular movies are updated simultaneously.</p>
 					
-					<form action="#" class="subscribe-form">
-						<div class="control">
-							<i class="fa fa-envelope"></i>
-							<input type="email" placeholder="Enter your email">
-							<input type="submit" value="Subscribe" class="button orange">
-						</div>
-					</form> <!-- .subscribe-form -->
 				</div> <!-- .container -->
 			</div> <!-- .hero -->
 
@@ -51,7 +69,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-4 pad-right">
-							<h2 class="section-title">It is so simple!</h2>
+							<h2 class="section-title">film information</h2>
 							<p>Assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus.</p>
 						</div> <!-- .column -->
 
@@ -61,7 +79,7 @@
 						</div> <!-- .column -->
 
 						<div class="col-sm-4 right-aligned  pad-left">
-							<h2 class="section-title">Why choose us?</h2>
+							<h2 class="section-title">Why choose this film?</h2>
 							<p>Oluptatem sequi nesciunt porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit labore dolore.</p>
 						</div> <!-- .column -->
 
@@ -70,7 +88,15 @@
 					<blockquote>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos atque harum tenetur consequatur officiis dolorem, dolor dolore autem fugit, esse porro doloribus ipsum, alias asperiores quidem ex corrupti vel dolores.</p>
 					</blockquote>
+					<form action="#" class="subscribe-form">
+						<div class="control">
+							<i class="fa fa-envelope"></i>
+							<input type="email" placeholder="Enter your email">
+							<input type="submit" value="Subscribe" class="button orange">
+						</div>
+					</form> <!-- .subscribe-form -->
 				</div>
+				
 			</main> <!-- .main-content -->
 
 			<footer class="site-footer">
