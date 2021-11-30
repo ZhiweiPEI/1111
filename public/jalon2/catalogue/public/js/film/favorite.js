@@ -11,22 +11,28 @@ function findAll() {
         type: 'post',
         dataType: 'json',
         success: function (data) {
-            console.log(data);
+            // console.log(data[0].title);
             setData(data);
         }
     });
 }
 
 function setData(data) {
+    console.log(data);
     var html = "";
-    for(let i = 0; i < 8; i++){
+    for(let i = 0; i < data.length; i++){
+        var title = data[i].title;
+        var img = data[i].image;
+        var director = data[i].director;
+        var description = data[i].description;
+        var actor = data[i].actor;
         html += '<tr>'+
-        '<th scope="row"><strong>'+data[i].name+'</strong></th>'+
-        '<td><img src="'+data[i].image+'" height="200" width="300"/></td>'+
-        '<td>'+data[i].director+'</td>'+
-        '<td>'+data[i].description+'</td>'+
-        '<td>'+data[i].actor+'</td>'+
-    '</tr>';
+        '<th scope="row"><strong>'+title+'</strong></th>'+
+        '<td><img src="'+img+'" height="200" width="300"/></td>'+
+        '<td>'+director+'</td>'+
+        '<td>'+description+'</td>'+
+        '<td>'+actor+'</td>'+
+        '</tr>';
     }
     $("#content").html(html);
 }

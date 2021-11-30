@@ -67,7 +67,7 @@ class FilmController extends Controller
             -> leftJoin("playlists","playlists.id","=","film_playlist_relation.playlist_id")
             -> leftJoin("user_playlist_relation","playlists.id","=","user_playlist_relation.playlist_id")
             -> leftJoin("users","users.id","=","user_playlist_relation.user_id")
-            -> where("users.email","=",$email) -> andWhere("playlists.name","=","J'aime")
+            -> where("users.email","=",$email) -> where("playlists.name","=","J'aime")
             -> get();
         // return view('filmupdate');
         echo($rst);
