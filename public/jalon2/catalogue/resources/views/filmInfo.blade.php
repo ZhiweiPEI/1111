@@ -85,6 +85,36 @@
 
 						<div class="col-sm-4 right-aligned  pad-left">
 							<h2 class="section-title">Why choose this film?</h2>
+							<div class="btn-group">
+								<input
+									type="radio"
+									class="btn-check"
+									name="options"
+									id="option1"
+									autocomplete="off"
+									checked
+								/>
+								<label class="btn btn-secondary" for="option1">like</label>
+
+								<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
+								<label class="btn btn-secondary" for="option2">not like</label>
+
+							</div>
+							<div class="btn-group">
+								<input
+									type="radio"
+									class="btn-check"
+									name="options"
+									id="option1"
+									autocomplete="off"
+									checked
+								/>
+								<label class="btn btn-secondary" for="option1">viewed</label>
+
+								<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
+								<label class="btn btn-secondary" for="option2">not viewed</label>
+
+							</div>
 							<p>Oluptatem sequi nesciunt porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit labore dolore.</p>
 						</div> <!-- .column -->
 
