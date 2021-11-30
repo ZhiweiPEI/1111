@@ -19,12 +19,17 @@
         <li class="nav-item active">
           <a class="nav-link" href="{{ url('/') }}">Home</a>
         </li>
-        <li class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link">Manage account</a></li>
             <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">Favorite</a></li>
             <li class="nav-item"><a href="{{ url('/histroy') }}" class="nav-link">Histroy</a></li>
             <li class="nav-item"><a href="{{ url('/playList') }}" class="nav-link">PlayList</a></li>
             <li class="nav-item"><a href="{{ url('/viewedList') }}" class="nav-link">ViewedList</a></li>
             <li class="nav-item"><a href="{{ url('/message') }}" class="nav-link">Message</a></li>
+			<li class="nav-item">
+                <form method="POST" action="http://localhost:8080/jalon2/catalogue/public/logout">
+                    <a href="{{ url('/logout') }}" class="nav-link" onclick="event.preventDefault();this.closest('form').submit();">Logout</a>
+                </form>
+            </li>
+            <li class="nav-item"><a href="{{ url('/user/profile') }}" class="nav-link">profile</a></li>
       </ul>
     </div>
   </div>
