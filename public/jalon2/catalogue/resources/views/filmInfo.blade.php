@@ -71,8 +71,72 @@
 				</div> <!-- .container -->
 			</div> <!-- .hero -->
 
+<<<<<<< HEAD
+			<main class="main-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4 pad-right">
+							<h2 class="section-title">film information</h2>
+							<p>Assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus.</p>
+						</div> <!-- .column -->
+
+						<div class="col-sm-4">
+							<video src="#" poster="img/images/cover.png">
+							</video>
+						</div> <!-- .column -->
+
+						<div class="col-sm-4 right-aligned  pad-left">
+							<h2 class="section-title">Why choose this film?</h2>
+							<div class="btn-group">
+								<input
+									type="radio"
+									class="btn-check"
+									name="options"
+									id="option1"
+									autocomplete="off"
+									checked
+								/>
+								<label class="btn btn-secondary" for="option1">like</label>
+
+								<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
+								<label class="btn btn-secondary" for="option2">not like</label>
+
+							</div>
+							<div class="btn-group">
+								<input
+									type="radio"
+									class="btn-check"
+									name="options"
+									id="option1"
+									autocomplete="off"
+									checked
+								/>
+								<label class="btn btn-secondary" for="option1">viewed</label>
+
+								<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
+								<label class="btn btn-secondary" for="option2">not viewed</label>
+
+							</div>
+							<p>Oluptatem sequi nesciunt porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit labore dolore.</p>
+						</div> <!-- .column -->
+
+					</div> <!-- .row -->
+
+					<blockquote>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos atque harum tenetur consequatur officiis dolorem, dolor dolore autem fugit, esse porro doloribus ipsum, alias asperiores quidem ex corrupti vel dolores.</p>
+					</blockquote>
+					<form action="#" class="subscribe-form">
+						<div class="control">
+							<i class="fa fa-envelope"></i>
+							<input type="email" placeholder="Enter your email">
+							<input type="submit" value="Subscribe" class="button orange">
+						</div>
+					</form> <!-- .subscribe-form -->
+				</div>
+=======
 			<main class="main-content" id = "content">
 				
+>>>>>>> c72c5911aed507150bd1a08025b28bf8942222a0
 				
 			</main> <!-- .main-content -->
 
