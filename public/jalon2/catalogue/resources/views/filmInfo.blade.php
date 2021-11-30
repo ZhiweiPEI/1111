@@ -10,6 +10,7 @@
         <script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/film/filmInfo.js"></script>
 		<link href="{{asset('css/styles.css') }}" rel="stylesheet" />
 <link href="{{asset('css/list.css') }}" rel="stylesheet" />
 
@@ -70,6 +71,7 @@
 				</div> <!-- .container -->
 			</div> <!-- .hero -->
 
+<<<<<<< HEAD
 			<main class="main-content">
 				<div class="container">
 					<div class="row">
@@ -131,6 +133,10 @@
 						</div>
 					</form> <!-- .subscribe-form -->
 				</div>
+=======
+			<main class="main-content" id = "content">
+				
+>>>>>>> c72c5911aed507150bd1a08025b28bf8942222a0
 				
 			</main> <!-- .main-content -->
 

@@ -6,9 +6,9 @@ function findAll() {
     var email = sessionStorage.getItem("email");
     console.log(email);
     $.ajax({
-        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/film/select',
-        data: {email: email},
-        type: 'get',
+        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/film/findFavorites',
+        data: {email,email},
+        type: 'post',
         dataType: 'json',
         success: function (data) {
             console.log(data);

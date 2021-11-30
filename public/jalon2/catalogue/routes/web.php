@@ -79,6 +79,7 @@ namespace App\Http\Controllers;
         Route::get('del', 'App\Http\Controllers\UserController@del');
         Route::get('update', 'App\Http\Controllers\UserController@update');
         Route::get('select', 'App\Http\Controllers\UserController@select');
+        Route::get('selectIdByEmail', 'App\Http\Controllers\UserController@selectIdByEmail');
     });
 
     Route::prefix('film') -> group(function(){
@@ -87,6 +88,8 @@ namespace App\Http\Controllers;
         Route::post('update', 'App\Http\Controllers\FilmController@update');
         Route::get('select', 'App\Http\Controllers\FilmController@select');
         Route::post('findByName', 'App\Http\Controllers\FilmController@findByName');
+        Route::post('findFavorites', 'App\Http\Controllers\FilmController@findFavorites');
+        Route::post('selectById', 'App\Http\Controllers\FilmController@selectById');
     });
 
     Route::prefix('category') -> group(function(){

@@ -73,4 +73,12 @@
             $rst = $db -> where('id','=','9') -> delete();
             dd($rst);
         }
+
+        public function selectIdByEmail(Request $request){
+            $email = $request -> input('email');
+            $db = DB::table('users');
+            $rst = $db -> where('email', '=', $email) -> get();
+            // return view('filmupdate');
+            echo($rst);
+        }
     }

@@ -35,10 +35,14 @@ function setData(data) {
                 '</div>'+
             '</div>'+
             '<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">'+
-                '<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View Info</a></div>'+
+                '<div class="text-center" onclick="setFilmSession('+ data[i].id +')"><a class="btn btn-outline-dark mt-auto" href="http://localhost:8080/jalon2/catalogue/public/filmInfo">View Info</a></div>'+
             '</div>'+
         '</div>'+
     '</div>';
     }
     $("#content").html(html);
+}
+
+function setFilmSession(data){
+    sessionStorage.setItem("filmId",data);
 }
