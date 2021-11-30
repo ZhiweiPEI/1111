@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
 
         <!-- Scripts -->
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
         <script src="{{ asset(mix('js/app.js')) }}" defer></script>
     </head>
     <body>
@@ -21,4 +22,10 @@
             {{ $slot }}
         </div>
     </body>
+
+    <script>
+        function getUser(){
+            sessionStorage.setItem("email", $("#email").val());
+        }
+    </script>
 </html>

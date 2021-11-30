@@ -1,6 +1,12 @@
 <html>
-<link href="{{asset('css/styles.css') }}" rel="stylesheet" />
-<link href="{{asset('css/list.css') }}" rel="stylesheet" />
+<head>
+    <meta name="referrer" content="no-referrer" /> 
+    <link rel="stylesheet" type="text/css" href="thstronge.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{asset('js/film/favorite.js')}}"></script>   
+    <link href="{{asset('css/styles.css') }}" rel="stylesheet" />   
+    <link href="{{asset('css/list.css') }}" rel="stylesheet" />
+</head>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container">
@@ -70,47 +76,13 @@
             <th scope="col">#</th>
             <th scope="col">Title</th>
             <th scope="col">Poster</th>
-            <th scope="col">IMBD</th>
+            <th scope="col">Directors</th>
             <th scope="col">Description</th>
             <th scope="col">Actors</th>
         </tr>
     </thead>
-    <tbody>
-    <tr>
-        <th scope="row"><strong>Melancholia</strong></th>
-        <td><img src="http://collider.com/wp-content/uploads/melancholia-movie-poster-404x600.jpg" height="250" width="175"/></td>
-        <td><a href="http://www.imdb.com/title/tt1527186/?ref_=nv_sr_1">About me!</a></td>
-        <td>An end of the world thriller with beautiful cinstrongatography and visuals</td>
-        <td>Kirsten Dunst, Alexanders Skaarsgard, Charlotte Gainsbourgh</td>
-    </tr>
-    <tr>
-        <th scope="row"><strong>Melancholia</strong></th>
-        <td><img src="https://m.media-amazon.com/images/M/MV5BMTY0NTQ1NjA0OV5BMl5BanBnXkFtZTgwMDg5NjkzMTE@._V1_UX67_CR0,0,67,98_AL_.jpg" height="250" width="175"/></td>
-        <td><a href="http://www.imdb.com/title/tt1714915/">About me!</a></td>
-        <td>An end of the world thriller with political overtones and a dystopic bleakness</td>
-        <td>Clive Owen, Juliette Moore, Michael Caine</td>
-    </tr>
-    <tr>
-        <th scope="row"><strong>Melancholia</strong></th>
-        <td><img src="http://www.undercine.com/wp-content/gallery/only-lovers-left-alive-vampiros/only-lovers-left-alive-australian-poster-copy.jpg" height="250" width="175"/></td>
-        <td><a href="http://www.imdb.com/title/tt1714915/">About me!</a></td>
-        <td>An end of the <strong>vampire</strong> world thriller that is cooly confident and satiated with intellectual overtones</td>
-        <td>Tilda Swinton, Tom Hiddleston, Mia Wasikowska</td>
-    </tr>
-    <tr>
-        <th scope="row"><strong>Melancholia</strong></th>
-        <td><img src="http://s5.postimg.org/ruxxb3747/tumblr_m4udhecb_Ja1qh4u7ro1_1280.jpg" height="250" width="175"/></td>
-        <td><a href="http://www.imdb.com/title/tt0245712/link">About me!</a></td>
-        <td>A politically charged film about love and the difficulty expressing this emotion between humans</td>
-        <td>Gael Garcia Bernal, Emilio Echevarria, Goya Toledo</td>
-    </tr>
-    <tr>
-        <th scope="row"><strong>Melancholia</strong></th>
-        <td><img src="http://ia.media-imdb.com/images/M/MV5BMTU3Mzc3MjE3N15BMl5BanBnXkFtZTYwMzY0MTg4._V1_SY317_CR10,0,214,317_AL_.jpg" height="250" width="175"/></td>
-        <td><a href="http://www.imdb.com/title/tt0117509/">About me!</a></td>
-        <td>A visually dynamic retelling of the Shakespeare classic that transports timed story of star-crossed lovers to the grungy existence of modern Mexico</td>
-        <td>Leonardo Dicaprio, Claire Danes</td>
-    </tr>
+    <tbody id = "content">
+    
     </tbody>
   </table>
 </body>

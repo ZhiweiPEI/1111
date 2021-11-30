@@ -3,9 +3,11 @@ $(function () {
 });
 
 function findAll() {
+    var email = sessionStorage.getItem("email");
+    console.log(email);
     $.ajax({
         url: 'http://localhost:8080/jalon2/catalogue/public/index.php/film/select',
-        data: {},
+        data: {email: email},
         type: 'get',
         dataType: 'json',
         success: function (data) {

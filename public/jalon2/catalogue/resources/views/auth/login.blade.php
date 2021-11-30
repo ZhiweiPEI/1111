@@ -38,11 +38,13 @@
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
-
-                <x-jet-button class="ml-4">
-                    {{ __('Log in') }}
-                </x-jet-button>
+                <div onclick = "getUser()">
+                    <x-jet-button class="ml-4">
+                        {{ __('Log in') }}
+                    </x-jet-button>
+                </div>
             </div>
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
+
