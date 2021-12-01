@@ -23,7 +23,7 @@ function setData(data) {
             '<img class="card-img-top" src="' + data[i].image + '" alt="..." />'+
             '<div class="card-body p-4">'+
                 '<div class="text-center">'+
-                    '<h5 class="fw-bolder">'  + data[i].name + '</h5>'+
+                    '<h5 class="fw-bolder">'  + data[i].title + '</h5>'+
                     '<div class="d-flex justify-content-center small text-warning mb-2">'+
                         '<div class="bi-star-fill"></div>'+
                         '<div class="bi-star-fill"></div>'+

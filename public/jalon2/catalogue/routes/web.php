@@ -47,6 +47,9 @@ namespace App\Http\Controllers;
         return view('filmInfo');
     });
 
+    Route::get('/message', function () {
+        return view('message');
+    });
 
     Route::get('/filmadd', function () {
         return view('filmadd');
