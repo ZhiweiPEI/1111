@@ -104,6 +104,10 @@ namespace App\Http\Controllers;
         Route::get('update', 'App\Http\Controllers\CategoryController@update');
         Route::get('select', 'App\Http\Controllers\CategoryController@select');
     });
+
+    Route::prefix('comment') -> group(function(){
+        Route::post('findByFilmId', 'App\Http\Controllers\CommentController@findByFilmId');
+    });
         
     //两个参数
     Route::get('user/{nom}/{prenom}', function ($nom,$prenom) {
