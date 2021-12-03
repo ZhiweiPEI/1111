@@ -3,6 +3,8 @@ $(function () {
 });
 
 function findAll() {
+    var email = sessionStorage.getItem("email");
+
     $.ajax({
         url: 'http://localhost:8080/jalon2/catalogue/public/index.php/film/select',
         data: {},
@@ -11,6 +13,17 @@ function findAll() {
         success: function (data) {
             console.log(data);
             setData(data);
+        }
+    });
+
+    $.ajax({
+        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/user/selectIdByEmail',
+        data: {email,email},
+        type: 'get',
+        dataType: 'json',
+        success: function (data) {
+            console.log(data);
+            sessionStorage.setItem("userId",data[0].id);
         }
     });
 }

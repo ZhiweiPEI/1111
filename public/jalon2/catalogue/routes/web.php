@@ -107,6 +107,8 @@ namespace App\Http\Controllers;
 
     Route::prefix('comment') -> group(function(){
         Route::post('findByFilmId', 'App\Http\Controllers\CommentController@findByFilmId');
+        Route::post('add', 'App\Http\Controllers\CommentController@add');
+        Route::post('del', 'App\Http\Controllers\CommentController@del');
     });
         
     //两个参数

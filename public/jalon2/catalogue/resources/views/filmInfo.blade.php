@@ -15,7 +15,6 @@
 		<script src="{{asset('js/message.js')}}"></script>
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 		<link href="{{asset('css/list.css') }}" rel="stylesheet" />
 
 <!-- Navigation -->
@@ -92,9 +91,10 @@
                         <ul id="message" class="list-group">
                             
                         </ul>
-                        <div onclick="addNewMessage()" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon"></span> add new comment</div>
+                        
+                        <textarea rows="3" cols="80" id = "textComment">You can add a comment here and click the add button</textarea>
+						<div onclick="addComment()" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon"></span> add new comment</div>
 
-                        <textarea rows="3" cols="80">You can add a comment here and click the add button</textarea>
                     </div>
                 </div>
             </div>

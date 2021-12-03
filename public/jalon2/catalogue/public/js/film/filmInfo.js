@@ -69,7 +69,7 @@ function setData(data) {
 
 function setComment(res){
     var html = "";
-    for(let i = 0; i < 5;i++){
+    for(let i = 0; i < res.length;i++){
         html += '<li class="list-group-item">'+
             '<div class="row lists">'+
                 '<div class="col-xs-2 col-md-1">'+
@@ -88,7 +88,7 @@ function setComment(res){
                         '<button onclick="modify()" type="button" class="btn btn-primary btn-xs" title="Edit">'+
                             '<span class="glyphicon glyphicon-pencil"></span>'+
                         '</button>'+
-                        '<button onclick="deleter1()" type="button" class="btn btn-danger btn-xs" title="Delete">'+
+                        '<button onclick="del('+ res[i].id +')" type="button" class="btn btn-danger btn-xs" title="Delete">'+
                             '<span class="glyphicon glyphicon-trash"></span>'+
                         '</button>'+
                     '</div>'+
@@ -98,4 +98,39 @@ function setComment(res){
         '</li>';
     }
     $("#message").html(html);
+}
+
+function addComment(){
+    console.log("before ajax");
+    $.ajax({
+        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/comment/add',
+        data: setAddData(),
+        type: 'post',
+        dataType: 'json',
+        success: function (res) {
+            console.log(res);
+        }
+    });
+}
+
+function setAddData(){
+    console.log(sessionStorage.getItem("userId"),111111);
+    return {
+        "comment" : $("#textComment").val(),
+        "userId" : sessionStorage.getItem("userId"),
+        "filmId" : sessionStorage.getItem("filmId")
+    };
+}
+
+function del(data){
+    console.log(data,11111);
+    $.ajax({
+        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/comment/del',
+        data: {id : data},
+        type: 'post',
+        dataType: 'json',
+        success: function (res) {
+            console.log(res);
+        }
+    });
 }
