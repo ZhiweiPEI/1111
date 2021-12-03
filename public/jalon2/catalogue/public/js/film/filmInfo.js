@@ -34,6 +34,8 @@ function setData(data) {
     '<div class="row">'+
         '<div class="col-sm-4 pad-right">'+
             '<h2 class="section-title">'+ data.title +'</h2>'+
+            '<button type="button" class="btn btn-primary btn-sm">viewed</button>'+
+            '<button type="button" class="btn btn-secondary btn-sm">not viewed</button>'+
             '<p>Directors: '+ data.director +'</p>'+
             '<p>Actors: '+ data.actor +'</p>'+
         '</div> <!-- .column -->'+
@@ -44,7 +46,7 @@ function setData(data) {
         '</div> <!-- .column -->'+
 
         '<div class="col-sm-4 right-aligned  pad-left">'+
-            '<h2 class="section-title">Why choose this film?</h2>'+
+            '<h2 class="section-title">Choose this film!</h2>'+
             '<div class="btn-group">'+
             '<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked/>'+
             '<label class="btn btn-secondary" for="option1">like</label>'+
@@ -53,7 +55,7 @@ function setData(data) {
             '<label class="btn btn-secondary" for="option2">not like</label>'+
 
             '</div>'+
-            '<p>Oluptatem sequi nesciunt porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit labore dolore.</p>'+
+            '<p>You can add your favorite list here so that you can go to your favorite page and select your movie in the navigation bar after the next login.</p>'+
         '</div> <!-- .column -->'+
 
     '</div> <!-- .row -->'+
