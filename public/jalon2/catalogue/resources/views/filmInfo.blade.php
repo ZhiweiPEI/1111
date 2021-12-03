@@ -73,7 +73,6 @@
 
 			<main class="main-content" id = "content">
 				
-				
 			</main> <!-- .main-content -->
 
 			<footer class="site-footer">
