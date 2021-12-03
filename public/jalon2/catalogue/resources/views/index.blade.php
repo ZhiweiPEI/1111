@@ -25,7 +25,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.blade.php">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./">Home</a></li>
                     
                         @if (Route::has('login'))
 
@@ -34,7 +34,6 @@
             <li class="nav-item"><a href="{{ url('/histroy') }}" class="nav-link">Histroy</a></li>
             <li class="nav-item"><a href="{{ url('/playList') }}" class="nav-link">PlayList</a></li>
             <li class="nav-item"><a href="{{ url('/viewedList') }}" class="nav-link">ViewedList</a></li>
-            <li class="nav-item"><a href="{{ url('/message') }}" class="nav-link">Message</a></li>
             <li class="nav-item">
                 <form method="POST" action="http://localhost:8080/jalon2/catalogue/public/logout">
                     <a href="{{ url('/logout') }}" class="nav-link" onclick="event.preventDefault();this.closest('form').submit();">Logout</a>

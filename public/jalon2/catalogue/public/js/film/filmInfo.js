@@ -49,14 +49,7 @@ function setData(data) {
 
     '<blockquote>'+
         '<p>'+ data.description +'</p>'+
-    '</blockquote>'+
-    '<form action="#" class="subscribe-form">'+
-        '<div class="control">'+
-            '<i class="fa fa-envelope"></i>'+
-            '<input type="email" placeholder="Enter your email">'+
-            '<input type="submit" value="Subscribe" class="button orange">'+
-        '</div>'+
-    '</form> <!-- .subscribe-form -->'+
+    '</blockquote>'
 '</div>';
     $("#content").html(html);
 }

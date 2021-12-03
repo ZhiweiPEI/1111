@@ -12,7 +12,11 @@
 		<script src="js/app.js"></script>
 		<script src="js/film/filmInfo.js"></script>
 		<link href="{{asset('css/styles.css') }}" rel="stylesheet" />
-<link href="{{asset('css/list.css') }}" rel="stylesheet" />
+		<script src="{{asset('js/message.js')}}"></script>
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<link href="{{asset('css/list.css') }}" rel="stylesheet" />
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -30,7 +34,6 @@
             <li class="nav-item"><a href="{{ url('/histroy') }}" class="nav-link">Histroy</a></li>
             <li class="nav-item"><a href="{{ url('/playList') }}" class="nav-link">PlayList</a></li>
             <li class="nav-item"><a href="{{ url('/viewedList') }}" class="nav-link">ViewedList</a></li>
-            <li class="nav-item"><a href="{{ url('/message') }}" class="nav-link">Message</a></li>
 			<li class="nav-item">
                 <form method="POST" action="http://localhost:8080/jalon2/catalogue/public/logout">
                     <a href="{{ url('/logout') }}" class="nav-link" onclick="event.preventDefault();this.closest('form').submit();">Logout</a>
@@ -74,6 +77,106 @@
 			<main class="main-content" id = "content">
 				
 			</main> <!-- .main-content -->
+
+			<div class="containers">
+            <div class="row">
+                <div class="panel panel-default widget">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        <h3 class="panel-title">
+                            Recent Comments</h3>
+                        <span class="label label-info">
+                            78</span>
+                    </div>
+                    <div class="panel-body">
+                        <ul id="message" class="list-group">
+                            <li class="list-group-item">
+                                <div class="row lists">
+                                    <div class="col-xs-2 col-md-1">
+                                        <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                                    <div class="col-xs-10 col-md-11">
+                                        <div>
+                                        <div id="title">title</div>
+                                            <div class="mic-info">
+                                                By: <div id="userName">Bhaumik Patel</div> on 2 Aug 2013
+                                            </div>
+                                        </div>
+                                        <div id="comment" class="comment-text">
+                                            Awesome design
+                                        </div>
+                                        <div class="action">
+                                            <button onclick="modify()" type="button" class="btn btn-primary btn-xs" title="Edit">
+                                                <span class="glyphicon glyphicon-pencil"></span>
+                                            </button>
+                                            <button onclick="deleter1()" type="button" class="btn btn-danger btn-xs" title="Delete">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+                                        </div>
+                                        <textarea rows="3" cols="40">You can edit the comment here, and then click the edit button</textarea>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row lists">
+                                    <div class="col-xs-2 col-md-1">
+                                        <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                                    <div class="col-xs-10 col-md-11">
+                                        <div>
+                                        <div id="title">title</div>
+                                            <div class="mic-info">
+                                                By: <div id="userName">Bhaumik Patel</div> on 2 Aug 2013
+                                            </div>
+                                        </div>
+                                        <div id="comment" class="comment-text">
+                                            Awesome design
+                                        </div>
+                                        <div class="action">
+                                            <button onclick="modify()" type="button" class="btn btn-primary btn-xs" title="Edit">
+                                                <span class="glyphicon glyphicon-pencil"></span>
+                                            </button>
+                                            <button onclick="deleter1()" type="button" class="btn btn-danger btn-xs" title="Delete">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+                                        </div>
+                                        <textarea rows="3" cols="40">You can edit the comment here, and then click the edit button</textarea>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row lists">
+                                    <div class="col-xs-2 col-md-1">
+                                        <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                                    <div class="col-xs-10 col-md-11">
+                                        <div>
+                                            <div id="title">title</div>
+                                            <div class="mic-info">
+                                                By: <div id="userName">Bhaumik Patel</div> on 11 Nov 2013
+                                            </div>
+                                        </div>
+                                        <div id="comment" class="comment-text">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+                                        </div>
+                                        <div class="action">
+                                            <button onclick="modify()" type="button" class="btn btn-primary btn-xs" title="Edit">
+                                                <span class="glyphicon glyphicon-pencil"></span>
+                                            </button>
+                                            <button onclick="deleter1()" type="button" class="btn btn-danger btn-xs" title="Delete">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+                                        </div>
+                                        <textarea rows="3" cols="40">You can edit the comment here, and then click the edit button</textarea>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div onclick="addNewMessage()" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon"></span> add new comment</div>
+
+                        <textarea rows="3" cols="80">You can add a comment here and click the add button</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 			<footer class="site-footer">
 				<div class="container">
