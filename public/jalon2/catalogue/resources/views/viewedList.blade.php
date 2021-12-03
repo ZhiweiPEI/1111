@@ -3,7 +3,7 @@
     <meta name="referrer" content="no-referrer" /> 
     <link rel="stylesheet" type="text/css" href="thstronge.css">
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="{{asset('js/film/favorite.js')}}"></script>   
+    <script src="{{asset('js/film/viewed.js')}}"></script>   
     <link href="{{asset('css/styles.css') }}" rel="stylesheet" />   
     <link href="{{asset('css/list.css') }}" rel="stylesheet" />
 </head>

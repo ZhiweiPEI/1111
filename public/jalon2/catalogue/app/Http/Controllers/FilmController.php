@@ -73,6 +73,45 @@ class FilmController extends Controller
         echo($rst);
     }
 
+    public function findHistory(Request $request){
+        $email = $request -> input('email');
+        $rst = DB::table("film")
+            -> rightJoin("film_playlist_relation","film.id","=","film_playlist_relation.film_id")
+            -> leftJoin("playlists","playlists.id","=","film_playlist_relation.playlist_id")
+            -> leftJoin("user_playlist_relation","playlists.id","=","user_playlist_relation.playlist_id")
+            -> leftJoin("users","users.id","=","user_playlist_relation.user_id")
+            -> where("users.email","=",$email) -> where("playlists.name","=","History")
+            -> get();
+        // return view('filmupdate');
+        echo($rst);
+    }
+
+    public function findViewed(Request $request){
+        $email = $request -> input('email');
+        $rst = DB::table("film")
+            -> rightJoin("film_playlist_relation","film.id","=","film_playlist_relation.film_id")
+            -> leftJoin("playlists","playlists.id","=","film_playlist_relation.playlist_id")
+            -> leftJoin("user_playlist_relation","playlists.id","=","user_playlist_relation.playlist_id")
+            -> leftJoin("users","users.id","=","user_playlist_relation.user_id")
+            -> where("users.email","=",$email) -> where("playlists.name","=","j'ai vu")
+            -> get();
+        // return view('filmupdate');
+        echo($rst);
+    }
+
+    public function findPlaylist(Request $request){
+        $email = $request -> input('email');
+        $rst = DB::table("film")
+            -> rightJoin("film_playlist_relation","film.id","=","film_playlist_relation.film_id")
+            -> leftJoin("playlists","playlists.id","=","film_playlist_relation.playlist_id")
+            -> leftJoin("user_playlist_relation","playlists.id","=","user_playlist_relation.playlist_id")
+            -> leftJoin("users","users.id","=","user_playlist_relation.user_id")
+            -> where("users.email","=",$email) -> where("playlists.name","=","j'ai vu")
+            -> get();
+        // return view('filmupdate');
+        echo($rst);
+    }
+
     public function selectById(Request $request){
         $name = $request -> input('id');
         $db = DB::table('film');
