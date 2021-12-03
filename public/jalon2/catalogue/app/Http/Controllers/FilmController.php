@@ -48,7 +48,7 @@ class FilmController extends Controller
     public function findByName(Request $request){
         $name = $request -> input('name');
         $db = DB::table('film');
-        $rst = $db -> where('name', '=', $name) -> get();
+        $rst = $db -> where('title', '=', $name) -> get();
         // return view('filmupdate');
         echo($rst);
     }
