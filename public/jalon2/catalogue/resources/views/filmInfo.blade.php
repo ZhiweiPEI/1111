@@ -73,6 +73,7 @@
 					
 				</div> <!-- .container -->
 			</div> <!-- .hero -->
+
 			<main class="main-content" id = "content">
 				
 			</main> <!-- .main-content -->

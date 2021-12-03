@@ -36,3 +36,11 @@ function setData(data) {
     }
     $("#content").html(html);
 }
+
+function setData(){
+    return {
+        "comment" : $("#comment").val(),
+        "userID" : sessionStorage.getItem("useid"),
+        "filmId" : sessionStorage.getItem("filmid")
+    };
+}
