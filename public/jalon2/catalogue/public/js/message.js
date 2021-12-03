@@ -6,9 +6,9 @@ function modify(e)
 
 }
 
-function deleter(e)
+function deleter1(e)
 {
-    var message = document.getElementsByClassName("row");
+    var message = document.getElementsByClassName("lists");
     message[1].parentNode.removeChild(message[1]);
     alert("delete success");
 }
@@ -16,7 +16,7 @@ function deleter(e)
 function addNewMessage(){
     var html = 
     '<li class="list-group-item">'+
-    '<div class="row">'+
+    '<div class="row lists">'+
         '<div class="col-xs-2 col-md-1">'+
             '<img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>'+
         '<div class="col-xs-10 col-md-11">'+
@@ -34,7 +34,7 @@ function addNewMessage(){
                 '<button onclick="modify()" type="button" class="btn btn-primary btn-xs" title="Edit">'+
                     '<span class="glyphicon glyphicon-pencil"></span>'+
                 '</button>'+
-                '<button onclick="deleter()" type="button" class="btn btn-danger btn-xs" title="Delete">'+
+                '<button onclick="deleter1()" type="button" class="btn btn-danger btn-xs" title="Delete">'+
                     '<span class="glyphicon glyphicon-trash"></span>'+
                 '</button>'+
             '</div>'+
