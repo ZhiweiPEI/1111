@@ -119,5 +119,57 @@ class FilmController extends Controller
         // return view('filmupdate');
         echo($rst);
     }
+
+    public function addViewed(Request $request){
+        $userId = $request -> input('userId');
+        $filmId = $request -> input('filmId');
+        $rst = DB::table("playlists")
+            -> select('playlist_id')
+            -> rightJoin("user_playlist_relation","playlists.id","=","user_playlist_relation.playlist_id")
+            -> leftJoin("users","users.id","=","user_playlist_relation.user_id")
+            -> where("users.id","=",$userId) -> where("playlists.name","=","j'ai vu")
+            -> first();
+        $db = DB::insert('insert into film_playlist_relation (film_id,playlist_id,create_time) values(?,?,?)',[$filmId, $rst->playlist_id, date("Y-m-d H:i:s")]);
+        echo(1);
+    }
+
+    public function addFavorite(Request $request){
+        $userId = $request -> input('userId');
+        $filmId = $request -> input('filmId');
+        $rst = DB::table("playlists")
+            -> select('playlist_id')
+            -> rightJoin("user_playlist_relation","playlists.id","=","user_playlist_relation.playlist_id")
+            -> leftJoin("users","users.id","=","user_playlist_relation.user_id")
+            -> where("users.id","=",$userId) -> where("playlists.name","=","j'aime")
+            -> first();
+        $db = DB::insert('insert into film_playlist_relation (film_id,playlist_id,create_time) values(?,?,?)',[$filmId, $rst->playlist_id, date("Y-m-d H:i:s")]);
+        echo(1);
+    }
+
+    public function delFavorite(Request $request){
+        $userId = $request -> input('userId');
+        $filmId = $request -> input('filmId');
+        $rst = DB::table("playlists")
+            -> select('playlist_id')
+            -> rightJoin("user_playlist_relation","playlists.id","=","user_playlist_relation.playlist_id")
+            -> leftJoin("users","users.id","=","user_playlist_relation.user_id")
+            -> where("users.id","=",$userId) -> where("playlists.name","=","j'aime")
+            -> first();
+        $db = DB::delete('delete from film_playlist_relation where film_id = ? and playlist_id = ?',[$filmId,$rst->playlist_id]);
+        echo(1);
+    }
+
+    public function delViewed(Request $request){
+        $userId = $request -> input('userId');
+        $filmId = $request -> input('filmId');
+        $rst = DB::table("playlists")
+            -> select('playlist_id')
+            -> rightJoin("user_playlist_relation","playlists.id","=","user_playlist_relation.playlist_id")
+            -> leftJoin("users","users.id","=","user_playlist_relation.user_id")
+            -> where("users.id","=",$userId) -> where("playlists.name","=","j'ai vu")
+            -> first();
+        $db = DB::delete('delete from film_playlist_relation where film_id = ? and playlist_id = ?',[$filmId,$rst->playlist_id]);
+        echo(1);
+    }
 }
 ?>

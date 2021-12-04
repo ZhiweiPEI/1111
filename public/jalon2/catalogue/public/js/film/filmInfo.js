@@ -34,8 +34,8 @@ function setData(data) {
     '<div class="row">'+
         '<div class="col-sm-4 pad-right">'+
             '<h2 class="section-title">'+ data.title +'</h2>'+
-            '<button type="button" class="btn btn-primary btn-sm">viewed</button>'+
-            '<button type="button" class="btn btn-secondary btn-sm">not viewed</button>'+
+            '<button type="button" class="btn btn-primary btn-sm" onclick = "addViewed('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">viewed</button>'+
+            '<button type="button" class="btn btn-secondary btn-sm" onclick = "delViewed('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">not viewed</button>'+
             '<p>Directors: '+ data.director +'</p>'+
             '<p>Actors: '+ data.actor +'</p>'+
         '</div> <!-- .column -->'+
@@ -49,10 +49,10 @@ function setData(data) {
             '<h2 class="section-title">Choose this film!</h2>'+
             '<div class="btn-group">'+
             '<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked/>'+
-            '<label class="btn btn-secondary" for="option1">like</label>'+
+            '<label class="btn btn-secondary" for="option1" onclick = "addFavorite('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">like</label>'+
 
             '<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />'+
-            '<label class="btn btn-secondary" for="option2">not like</label>'+
+            '<label class="btn btn-secondary" for="option2" onclick = "delFavorite('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">not like</label>'+
 
             '</div>'+
             '<p>You can add your favorite list here so that you can go to your favorite page and select your movie in the navigation bar after the next login.</p>'+
@@ -127,6 +127,54 @@ function del(data){
     $.ajax({
         url: 'http://localhost:8080/jalon2/catalogue/public/index.php/comment/del',
         data: {id : data},
+        type: 'post',
+        dataType: 'json',
+        success: function (res) {
+            console.log(res);
+        }
+    });
+}
+
+function addViewed(userId,filmId){
+    $.ajax({
+        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/film/addViewed',
+        data: {userId , filmId},
+        type: 'post',
+        dataType: 'json',
+        success: function (res) {
+            console.log(res);
+        }
+    });
+}
+
+function addFavorite(userId,filmId){
+    $.ajax({
+        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/film/addFavorite',
+        data: {userId , filmId},
+        type: 'post',
+        dataType: 'json',
+        success: function (res) {
+            console.log(res);
+        }
+    });
+}
+
+function delViewed(userId,filmId){
+    $.ajax({
+        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/film/delViewed',
+        data: {userId , filmId},
+        type: 'post',
+        dataType: 'json',
+        success: function (res) {
+            console.log(res);
+        }
+    });
+}
+
+function delFavorite(userId,filmId){
+    $.ajax({
+        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/film/delFavorite',
+        data: {userId , filmId},
         type: 'post',
         dataType: 'json',
         success: function (res) {
