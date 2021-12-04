@@ -18,7 +18,7 @@ function findAll() {
 
     $.ajax({
         url: 'http://localhost:8080/jalon2/catalogue/public/index.php/user/selectIdByEmail',
-        data: {email,email},
+        data: {email:email},
         type: 'get',
         dataType: 'json',
         success: function (data) {
