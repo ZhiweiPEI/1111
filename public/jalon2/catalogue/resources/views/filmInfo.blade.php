@@ -29,6 +29,7 @@
         <li class="nav-item active">
           <a class="nav-link" href="{{ url('/') }}">Home</a>
         </li>
+			<li class="nav-item"><a href="{{ url('/type') }}" class="nav-link">type</a></li>
             <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">Favorite</a></li>
             <li class="nav-item"><a href="{{ url('/histroy') }}" class="nav-link">Histroy</a></li>
             <li class="nav-item"><a href="{{ url('/playList') }}" class="nav-link">PlayList</a></li>
@@ -93,7 +94,7 @@
                         </ul>
                         
                         <textarea rows="3" cols="80" id = "textComment">You can add a comment here and click the add button</textarea>
-						<div onclick="addComment()" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon"></span> add new comment</div>
+						<div onclick="addComment();addNewMessage()" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon"></span> add new comment</div>
 
                     </div>
                 </div>

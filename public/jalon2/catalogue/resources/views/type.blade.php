@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -85,14 +85,16 @@
                 </div>
             </div>
         </header>
-        <!-- Section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id = "content">
-                    
-                </div>
-            </div>
-        </section>
+        <div style="margin-top:50px;margin-bottom:300px;">
+            <button action="" type="button" class="btn btn-primary">Primary</button>
+            <button action="" type="button" class="btn btn-secondary">Secondary</button>
+            <button action="" type="button" class="btn btn-success">Success</button>
+            <button action="" type="button" class="btn btn-danger">Danger</button>
+            <button action="" type="button" class="btn btn-warning">Warning</button>
+            <button action="" type="button" class="btn btn-info">Info</button>
+            <button action="" type="button" class="btn btn-light">Light</button>
+            <button action="" type="button" class="btn btn-dark">Dark</button>
+        </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="col-lg-6 h-100 text-center text-lg-end my-auto">

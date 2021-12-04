@@ -1,3 +1,10 @@
+function addA(){
+    alert("add success");
+}
+function delA(){
+    alert("del success");
+}
+
 function modify(e)
 {
 
@@ -8,12 +15,26 @@ function modify(e)
 
 function deleter1(e)
 {
-    var message = document.getElementsByClassName("lists");
-    message[1].parentNode.removeChild(message[1]);
+    // var message = document.getElementsByClassName("lists");
+    // message[1].parentNode.removeChild(message[1]);
+    
     alert("delete success");
+    location.replace(document.referrer);
+}
+
+function getCommentName(){
+
+}
+
+function getUserName(){
+    var id = sessionStorage.getItem("userId");
+    return id.nam
 }
 
 function addNewMessage(){
+
+    var info = $("#textComment").val();
+    var myDate = new Date();
     var html = 
     '<li class="list-group-item">'+
     '<div class="row lists">'+
@@ -23,18 +44,16 @@ function addNewMessage(){
             '<div>'+
                 '<div id="title">title</div>'+
                 '<div class="mic-info">'+
-                    'By: <div id="userName">Bhaumik Patel</div> on 11 Nov 2013'+
+                    'By: <div id="userName">'+sessionStorage.getItem("userId")+'</div> on '+myDate.getFullYear()+'-'+myDate.getMonth()+1+'-'+myDate.getDate()+
                 '</div>'+
             '</div>'+
-            '<div id="comment" class="comment-text">'+
-                'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh'+
-                'euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim'+
+            '<div id="comment" class="comment-text">'+ info +
             '</div>'+
             '<div class="action">'+
                 '<button onclick="modify()" type="button" class="btn btn-primary btn-xs" title="Edit">'+
                     '<span class="glyphicon glyphicon-pencil"></span>'+
                 '</button>'+
-                '<button onclick="deleter1()" type="button" class="btn btn-danger btn-xs" title="Delete">'+
+                '<button onclick="del(res[i].id);deleter1()" type="button" class="btn btn-danger btn-xs" title="Delete">'+
                     '<span class="glyphicon glyphicon-trash"></span>'+
                 '</button>'+
             '</div>'+

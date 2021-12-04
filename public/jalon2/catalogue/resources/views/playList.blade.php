@@ -14,6 +14,7 @@
         <li class="nav-item active">
           <a class="nav-link" href="{{ url('/') }}">Home</a>
         </li>
+            <li class="nav-item"><a href="{{ url('/type') }}" class="nav-link">type</a></li>
             <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">Favorite</a></li>
             <li class="nav-item"><a href="{{ url('/histroy') }}" class="nav-link">Histroy</a></li>
             <li class="nav-item"><a href="{{ url('/playList') }}" class="nav-link">PlayList</a></li>

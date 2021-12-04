@@ -24,6 +24,7 @@ function findAll() {
         success: function (data) {
             console.log(data);
             sessionStorage.setItem("userId",data[0].id);
+            //sessionStorage.setItem("userName",data[0].name);
         }
     });
 }

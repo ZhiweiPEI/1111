@@ -81,4 +81,12 @@
             // return view('filmupdate');
             echo($rst);
         }
+
+        public function selectById(Request $request){
+            $id = $request -> input('id');
+            $db = DB::table('users');
+            $rst = $db -> where('id', '=', $id) -> get();
+            // return view('filmupdate');
+            echo($rst);
+        }
     }

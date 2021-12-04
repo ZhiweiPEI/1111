@@ -34,8 +34,8 @@ function setData(data) {
     '<div class="row">'+
         '<div class="col-sm-4 pad-right">'+
             '<h2 class="section-title">'+ data.title +'</h2>'+
-            '<button type="button" class="btn btn-primary btn-sm" onclick = "addViewed('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">viewed</button>'+
-            '<button type="button" class="btn btn-secondary btn-sm" onclick = "delViewed('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">not viewed</button>'+
+            '<button type="button" class="btn btn-primary btn-sm" onclick = "addA();addViewed('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">viewed</button>'+
+            '<button type="button" class="btn btn-secondary btn-sm" onclick = "delA();delViewed('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">not viewed</button>'+
             '<p>Directors: '+ data.director +'</p>'+
             '<p>Actors: '+ data.actor +'</p>'+
         '</div> <!-- .column -->'+
@@ -49,10 +49,10 @@ function setData(data) {
             '<h2 class="section-title">Choose this film!</h2>'+
             '<div class="btn-group">'+
             '<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked/>'+
-            '<label class="btn btn-secondary" for="option1" onclick = "addFavorite('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">like</label>'+
+            '<label class="btn btn-secondary" for="option1" onclick = "addA();addFavorite('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">like</label>'+
 
             '<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />'+
-            '<label class="btn btn-secondary" for="option2" onclick = "delFavorite('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">not like</label>'+
+            '<label class="btn btn-secondary" for="option2" onclick = "delA();delFavorite('+ sessionStorage.getItem("userId")+','+ sessionStorage.getItem("filmId") +')">not like</label>'+
 
             '</div>'+
             '<p>You can add your favorite list here so that you can go to your favorite page and select your movie in the navigation bar after the next login.</p>'+
@@ -88,7 +88,7 @@ function setComment(res){
                         '<button onclick="modify()" type="button" class="btn btn-primary btn-xs" title="Edit">'+
                             '<span class="glyphicon glyphicon-pencil"></span>'+
                         '</button>'+
-                        '<button onclick="del('+ res[i].id +')" type="button" class="btn btn-danger btn-xs" title="Delete">'+
+                        '<button onclick="del('+ res[i].id +');deleter1()" type="button" class="btn btn-danger btn-xs" title="Delete">'+
                             '<span class="glyphicon glyphicon-trash"></span>'+
                         '</button>'+
                     '</div>'+
