@@ -52,6 +52,7 @@ class CommentController extends Controller
         $rst = DB::table('comment')
             -> leftJoin('users','comment.user_id','=','users.id')
             -> where('comment.film_id','=',$id)
+            -> where('comment.statut','=',1)
             -> orderBy('comment.create_time','desc')
             -> select('comment.id','content','film_id','create_time','name')
             -> get();
@@ -59,7 +60,7 @@ class CommentController extends Controller
     }
 
     public function add(Request $request){
-        $db = DB::insert('insert into comment (content,user_id,film_id,statut,create_time) values(?,?,?,?,?)',[$request->comment, $request->userId ,$request->filmId, 1 , date("Y-m-d H:i:s")]);
+        $db = DB::insert('insert into comment (content,user_id,film_id,statut,create_time) values(?,?,?,?,?)',[$request->comment, $request->userId ,$request->filmId, 0 , date("Y-m-d H:i:s")]);
         echo(1);
     }
 
@@ -72,15 +73,15 @@ class CommentController extends Controller
     public function updateEnable(Request $request){
         $id = $request -> input('id');
         $db = DB::table('comment');
-        $enable = $db -> select('statut') -> where('id','=',$id) -> first();
-        if($enable -> enable > 0){
-            $enable = 0;
+        $statut = $db -> select('statut') -> where('id','=',$id) -> first();
+        if($statut -> statut == 1){
+            $statut = 0;
         }
-        else if($enable -> enable == 0){
-            $enable = 1;
+        else if($statut -> statut == 0){
+            $statut = 1;
         }
         $rst = $db -> where('id','=',$id) -> update([  
-            'statut' => $enable
+            'statut' => $statut
         ]);
         echo(1);
     }
