@@ -8,6 +8,29 @@ use DB;
 class CommentController extends Controller
 {
 
+    public function selectAll(Request $request){
+        $user = $request -> input('user');
+        $film = $request -> input('film');
+        $statut = $request -> input('statut');
+        $db = DB::table('comment');
+        if(!empty($user)){
+            $rst = $db -> where("user_id","=",$user);
+        }
+        if(!empty($email)){
+            $rst = $db -> where("film_id","=",$film);
+        }
+        if(!empty($email)){
+            $rst = $db -> where("film_id","=",$film);
+        }
+        $rst = $db -> get();
+        echo($rst);
+    }
+
+    public function getCount(Request $request){
+        $rst = DB::table('comment') -> count();
+        echo($rst);
+    }
+
     public function findByFilmId(Request $request){
         $id = $request -> input('id');
         $rst = DB::table('comment')
@@ -30,5 +53,20 @@ class CommentController extends Controller
         echo(1);
     }
 
+    public function updateEnable(Request $request){
+        $id = $request -> input('id');
+        $db = DB::table('comment');
+        $enable = $db -> select('statut') -> where('id','=',$id) -> first();
+        if($enable -> enable > 0){
+            $enable = 0;
+        }
+        else if($enable -> enable == 0){
+            $enable = 1;
+        }
+        $rst = $db -> where('id','=',$id) -> update([  
+            'statut' => $enable
+        ]);
+        echo(1);
+    }
 }
 ?>

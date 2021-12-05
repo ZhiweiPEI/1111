@@ -129,6 +129,9 @@ namespace App\Http\Controllers;
         Route::post('findByFilmId', 'App\Http\Controllers\CommentController@findByFilmId');
         Route::post('add', 'App\Http\Controllers\CommentController@add');
         Route::post('del', 'App\Http\Controllers\CommentController@del');
+        Route::get('selectAll', 'App\Http\Controllers\CommentController@selectAll');
+        Route::post('getCount', 'App\Http\Controllers\CommentController@getCount');
+        Route::post('updateEnable', 'App\Http\Controllers\UserController@updateEnable');
     });
         
     //两个参数

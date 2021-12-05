@@ -34,28 +34,28 @@ function member_stop(obj,id){
     layer.confirm('确认要'+ status +'吗？',function(index){
 
         $.ajax({
-            url: 'http://localhost:8080/jalon2/catalogue/public/index.php/user/updateEnable',
+            url: 'http://localhost:8080/jalon2/catalogue/public/index.php/comment/updateEnable',
             data: {id: id},
             type: 'post',
             dataType: 'json',
             success: function (data) {
                 console.log(data);
                 if (data == 1) {
-                    if ($(obj).attr('title') == '启用') {
+                    if ($(obj).attr('title') == '已过审') {
 
                         //发异步把用户状态进行更改
-                        $(obj).attr('title', '停用')
+                        $(obj).attr('title', '未过审')
                         $(obj).find('i').html('&#xe62f;');
 
-                        $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
-                        layer.msg('已停用!', {icon: 5, time: 1000});
+                        $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('未过审');
+                        layer.msg('未过审!', {icon: 5, time: 1000});
 
                     } else {
-                        $(obj).attr('title', '启用')
+                        $(obj).attr('title', '已过审')
                         $(obj).find('i').html('&#xe601;');
 
-                        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
-                        layer.msg('已启用!', {icon: 5, time: 1000});
+                        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已过审');
+                        layer.msg('已过审!', {icon: 5, time: 1000});
                     }
                 }
             }
@@ -68,7 +68,7 @@ function member_del(obj,id){
     layer.confirm('确认要删除吗？',function(index){
         //发异步删除数据
         $.ajax({
-            url: 'http://localhost:8080/jalon2/catalogue/public/index.php/user/del',
+            url: 'http://localhost:8080/jalon2/catalogue/public/index.php/comment/del',
             data: {id: id},
             type: 'post',
             dataType: 'json',
@@ -95,7 +95,7 @@ function getSearchData() {
 
 function findAll() {
     $.ajax({
-        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/user/select',//地址：访问后台的地址
+        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/comment/selectAll',//地址：访问后台的地址
         data: getSearchData(),//前端传递给后台的数据
         type: 'get',
         dataType: 'json',//是后端传递到前端的数据格式dataType: 'json',
@@ -111,13 +111,14 @@ function setList(data)  {
     for (var i = 0; i < data.length; i++) {
         html += '<tr>\n' +
             '                            <td>' + data[i].id + '</td>\n' +
-            '                            <td>' + data[i].name + '</td>\n' +
-            '                            <td>' + setRoles(data[i].enable) +'</td>\n' +
-            '                            <td>' + setUndefinedToNull(data[i].email) + '</td>\n' +
+            '                            <td>' + data[i].content + '</td>\n' +
+            '                            <td>' + setUndefinedToNull(data[i].user_id) + '</td>\n' +
+            '                            <td>' + setUndefinedToNull(data[i].film_id) + '</td>\n' +
+            '                            <td>' + setUndefinedToNull(data[i].create_time) + '</td>\n' +
             '                            <td class="td-status">\n' +
-            '                                <span class="layui-btn '+ (data[i].enable>0?"layui-btn-normal":"layui-btn-disabled") +' layui-btn-mini ">' + (data[i].enable > 0 ? "已启用" : "已停用") + '</span></td>\n' +
+            '                                <span class="layui-btn '+ (data[i].statut>0?"layui-btn-normal":"layui-btn-disabled") +' layui-btn-mini ">' + (data[i].statut > 0 ? "已过审" : "未过审") + '</span></td>\n' +
             '                            <td class="td-manage">\n' +
-            '                                <a onclick="member_stop(this,' + data[i].id + ')" href="javascript:;" title="' + (data[i].enable > 0 ? "启用" : "停用") + '">\n' +
+            '                                <a onclick="member_stop(this,' + data[i].id + ')" href="javascript:;" title="' + (data[i].statut > 0 ? "已过审" : "未过审") + '">\n' +
             '                                    <i class="layui-icon">&#xe601;</i>\n' +
             '                                </a>\n' +
             '                                <a title="编辑" onclick="edit(' + data[i].id + ')" href="javascript:;"\n' +
@@ -161,7 +162,7 @@ function edit(id) {
 function getCount(){
     var count = 0;
     $.ajax({
-        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/user/getCount',//地址：访问后台的地址
+        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/comment/getCount',//地址：访问后台的地址
         data: getSearchData(),//前端传递给后台的数据
         type: 'post',
         async: false,
