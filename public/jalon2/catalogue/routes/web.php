@@ -51,8 +51,8 @@ namespace App\Http\Controllers;
         return view('message');
     });
 
-    Route::get('/type', function () {
-        return view('type');
+    Route::get('/admin', function () {
+        return view('admin');
     });
 
     Route::get('/filmadd', function () {
