@@ -102,6 +102,7 @@ namespace App\Http\Controllers;
         Route::post('selectById', 'App\Http\Controllers\FilmController@selectById');
         Route::post('addViewed', 'App\Http\Controllers\FilmController@addViewed');
         Route::post('addFavorite', 'App\Http\Controllers\FilmController@addFavorite');
+        Route::post('addHistory', 'App\Http\Controllers\FilmController@addHistory');
         Route::post('delViewed', 'App\Http\Controllers\FilmController@delViewed');
         Route::post('delFavorite', 'App\Http\Controllers\FilmController@delFavorite');
     });

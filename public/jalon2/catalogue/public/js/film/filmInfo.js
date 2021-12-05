@@ -26,6 +26,22 @@ function findAll() {
             setComment(res);
         }
     });
+
+    var userId = sessionStorage.getItem("userId");
+
+    $.ajax({
+        url: 'http://localhost:8080/jalon2/catalogue/public/index.php/film/addHistory',
+        data: {
+                userId:userId,
+                filmId:id
+            },
+        type: 'post',
+        dataType: 'json',
+        success: function (res) {
+            console.log(res);
+        }
+    });
+
 }
 
 function setData(data) {
