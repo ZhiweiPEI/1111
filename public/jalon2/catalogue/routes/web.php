@@ -55,6 +55,14 @@ namespace App\Http\Controllers;
         return view('admin');
     });
 
+    Route::get('/admin/mess', function () {
+        return view('adminMess');
+    });
+
+    Route::get('/admin/user', function () {
+        return view('adminUser');
+    });
+
     Route::get('/filmadd', function () {
         return view('filmadd');
     });
