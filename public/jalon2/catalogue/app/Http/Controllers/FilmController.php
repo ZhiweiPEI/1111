@@ -39,8 +39,16 @@ class FilmController extends Controller
         dd($rst);
     }
 
-    public function select(){
+    public function select(Request $request){
+        $name = $request -> input('search');
+        $type = $request -> input('type');
         $db = DB::table('film');
+        if(!empty($type)){
+            $rst = $db -> rightJoin('film_category_relation',"film.id","=","film_category_relation.film_id") -> where("category_id","=",$type);
+        }
+        if(!empty($name)){
+            $rst = $db -> where('title',"=",$name);
+        }
         $rst = $db -> get();
         echo($rst);
     }

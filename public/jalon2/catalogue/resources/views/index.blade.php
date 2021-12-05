@@ -30,7 +30,6 @@
                         @if (Route::has('login'))
 
         @auth
-            <li class="nav-item"><a href="{{ url('/type') }}" class="nav-link">type</a></li>
             <li class="nav-item"><a href="{{ url('/favorite') }}" class="nav-link">Favorite</a></li>
             <li class="nav-item"><a href="{{ url('/histroy') }}" class="nav-link">Histroy</a></li>
             <li class="nav-item"><a href="{{ url('/playList') }}" class="nav-link">PlayList</a></li>
@@ -65,14 +64,15 @@
                             </ul>
                         </li> -->
                     </ul>
-                    <form class="form-inline my-2 my-lg-0" role="search" method="get" action="/Search/SearchList" target="_blank">
+                    <form class="form-inline my-2 my-lg-0" role="search" method="get" action="" target="iframe">
                         <div class="input-group">
-                        <input type="text" class="form-control" name="keyword" placeholder="you can search here">
+                        <input id="search" type="text" class="form-control" name="keyword" placeholder="you can search here">
                         <span class="input-group-btn">
-                        <button type="submit" class="btn btn-secondary">search</button>
+                        <button type="submit" class="btn btn-secondary" onclick = "findAll()">search</button>
                         </span>
                         </div><!-- /input-group -->
                     </form>
+                    <iframe id="iframe" name="iframe" style="display:none;"></iframe>
                 </div>
             </div>
         </nav>
@@ -85,6 +85,26 @@
                 </div>
             </div>
         </header>
+        <div style="margin-top:50px;">
+            <button action="" type="button" class="btn btn-primary" onclick="findAll(1)">Action</button>
+            <button action="" type="button" class="btn btn-secondary" onclick="findAll(4)">Adventure</button>
+            <button action="" type="button" class="btn btn-success" onclick="findAll(2)">Comedy</button>
+            <button action="" type="button" class="btn btn-danger" onclick="findAll(5)">Drama</button>
+            <button action="" type="button" class="btn btn-warning" onclick="findAll(6)">Horror</button>
+            <button action="" type="button" class="btn btn-info" onclick="findAll(7)">Fantasy</button>
+            <button action="" type="button" class="btn btn-light" onclick="findAll(8)">Romance</button>
+            <button action="" type="button" class="btn btn-dark" onclick="findAll(9)">Animation</button>
+        </div>
+        <div style = "margin-top:50px">
+            <button action="" type="button" class="btn btn-primary" onclick="findAll(10)">Thriller</button>
+            <button action="" type="button" class="btn btn-secondary" onclick="findAll(11)">Suspense</button>
+            <button action="" type="button" class="btn btn-success" onclick="findAll(3)">Science Fiction</button>
+            <button action="" type="button" class="btn btn-danger" onclick="findAll(12)">Musical</button>
+            <button action="" type="button" class="btn btn-warning" onclick="findAll(13)">War Film</button>
+            <button action="" type="button" class="btn btn-info" onclick="findAll(14)">Western Film</button>
+            <button action="" type="button" class="btn btn-light" onclick="findAll(15)">Epic Film</button>
+            <button action="" type="button" class="btn btn-dark" onclick="findAll(16)">Historical Film</button>
+        </div>
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">

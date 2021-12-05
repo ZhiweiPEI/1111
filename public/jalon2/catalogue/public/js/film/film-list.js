@@ -2,16 +2,19 @@ $(function () {
     findAll();
 });
 
-function findAll() {
+function findAll(data) {
     var email = sessionStorage.getItem("email");
-
+    var search = $("#search").val();
     $.ajax({
         url: 'http://localhost:8080/jalon2/catalogue/public/index.php/film/select',
-        data: {},
+        data: {
+                search:search,
+                type : data
+            },
         type: 'get',
         dataType: 'json',
         success: function (data) {
-            console.log(data);
+            console.log(data,1111);
             setData(data);
         }
     });
@@ -31,7 +34,7 @@ function findAll() {
 
 function setData(data) {
     var html = "";
-    for(let i = 0; i < 8; i++){
+    for(let i = 0; i < data.length; i++){
         html += '<div class="col mb-5">'+
         '<div class="card h-100">'+
             '<img class="card-img-top" src="' + data[i].image + '" alt="..." />'+
