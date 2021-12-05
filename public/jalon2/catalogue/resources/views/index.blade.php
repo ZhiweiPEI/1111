@@ -39,6 +39,7 @@
                     <a href="{{ url('/logout') }}" class="nav-link" onclick="event.preventDefault();this.closest('form').submit();">Logout</a>
                 </form>
             </li>
+            <li class="nav-item" id = "admin"><a href="{{ url('/favorite') }}" class="nav-link">admin</a></li>
             <li class="nav-item"><a href="{{ url('/user/profile') }}" class="nav-link">profile</a></li>
         @else
         <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>

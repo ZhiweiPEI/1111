@@ -27,9 +27,16 @@ function findAll(data) {
         success: function (data) {
             console.log(data);
             sessionStorage.setItem("userId",data[0].id);
+            sessionStorage.setItem('admin',data[0].enable);
             //sessionStorage.setItem("userName",data[0].name);
         }
     });
+
+    if(sessionStorage.getItem("admin") == 3){
+        var html = "";
+        html += '<a href="http://localhost:8080/jalon2/catalogue/public/myAdmin/" class="nav-link">admin</a>';
+        $("#admin").html(html);
+    }
 }
 
 function setData(data) {
