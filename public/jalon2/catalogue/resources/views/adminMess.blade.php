@@ -86,29 +86,7 @@
             </div>
         </header>
         <div style="margin-top:50px;margin-bottom:300px;">
-        <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="admin manage..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button" onclick="" >
-                                    <i class="fas fa-search fa-sm"></i>
-                                    <il>comment manage</il>
-                                    <a href="{{ url('/admin/mess') }}">comment manage</a>
-
-                                </button>
-
-                                <button class="btn btn-primary" type="button" onclick="">
-                                    <i class="fas fa-search fa-sm"></i>
-                                    <il>user manage</il>
-                                    <a href="{{ url('/admin/user') }}">user manage</a>
-                                </button>
-                            </div>
-                        </div>
-        </form> 
-        </div>
-          
+                在这里调用未完成的评论数据库</div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
