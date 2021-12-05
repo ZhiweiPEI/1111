@@ -94,6 +94,7 @@
             <button action="" type="button" class="btn btn-info" onclick="findAll(7)">Fantasy</button>
             <button action="" type="button" class="btn btn-light" onclick="findAll(8)">Romance</button>
             <button action="" type="button" class="btn btn-dark" onclick="findAll(9)">Animation</button>
+            <button action="" type="button" class="btn btn-primary" onclick="findAll()">Return to All</button>
         </div>
         <div style = "margin-top:50px">
             <button action="" type="button" class="btn btn-primary" onclick="findAll(10)">Thriller</button>

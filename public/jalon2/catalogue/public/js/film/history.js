@@ -28,11 +28,15 @@ function setData(data) {
         var actor = data[i].actor;
         html += '<tr>'+
         '<th scope="row"><strong>'+title+'</strong></th>'+
-        '<td><img src="'+img+'" height="200" width="300"/></td>'+
+        '<td><div onclick="setFilmSession('+ data[i].film_id +')"><a href="http://localhost:8080/jalon2/catalogue/public/filmInfo"><img src="'+img+'" height="200" width="300"/></a></div></td>'+
         '<td>'+director+'</td>'+
         '<td>'+description+'</td>'+
         '<td>'+actor+'</td>'+
         '</tr>';
     }
     $("#content").html(html);
+}
+
+function setFilmSession(data){
+    sessionStorage.setItem("filmId",data);
 }
