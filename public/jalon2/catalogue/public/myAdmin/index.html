@@ -2,7 +2,7 @@
 <html class="x-admin-sm">
     <head>
         <meta charset="UTF-8">
-        <title>后台登录-X-admin2.2</title>
+        <title>Backstage login-X-admin2.2</title>
         <meta name="renderer" content="webkit|ie-comp|ie-stand">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
@@ -35,24 +35,24 @@
             </div>
             <ul class="layui-nav left fast-add" lay-filter="">
                 <li class="layui-nav-item">
-                    <a href="javascript:;">+新增</a>
+                    <a href="javascript:;">+Add</a>
                     <dl class="layui-nav-child">
                         <!-- 二级菜单 -->
                         <dd>
                             <a onclick="xadmin.open('最大化','http://www.baidu.com','','',true)">
-                                <i class="iconfont">&#xe6a2;</i>弹出最大化</a></dd>
+                                <i class="iconfont">&#xe6a2;</i>Pop up maximize</a></dd>
                         <dd>
                             <a onclick="xadmin.open('弹出自动宽高','http://www.baidu.com')">
-                                <i class="iconfont">&#xe6a8;</i>弹出自动宽高</a></dd>
+                                <i class="iconfont">&#xe6a8;</i>Pop up automatic width and height</a></dd>
                         <dd>
                             <a onclick="xadmin.open('弹出指定宽高','http://www.baidu.com',500,300)">
-                                <i class="iconfont">&#xe6a8;</i>弹出指定宽高</a></dd>
+                                <i class="iconfont">&#xe6a8;</i>Pop up the specified width and height</a></dd>
                         <dd>
                             <a onclick="xadmin.add_tab('在tab打开','member-list.html')">
-                                <i class="iconfont">&#xe6b8;</i>在tab打开</a></dd>
+                                <i class="iconfont">&#xe6b8;</i>Open in tab</a></dd>
                         <dd>
                             <a onclick="xadmin.add_tab('在tab打开刷新','member-del.html',true)">
-                                <i class="iconfont">&#xe6b8;</i>在tab打开刷新</a></dd>
+                                <i class="iconfont">&#xe6b8;</i>Open refresh in tab</a></dd>
                     </dl>
                 </li>
             </ul>
@@ -62,15 +62,15 @@
                     <dl class="layui-nav-child">
                         <!-- 二级菜单 -->
                         <dd>
-                            <a onclick="xadmin.open('个人信息','http://www.baidu.com')">个人信息</a></dd>
+                            <a onclick="xadmin.open('个人信息','http://www.baidu.com')">personal information</a></dd>
                         <dd>
-                            <a onclick="xadmin.open('切换帐号','http://www.baidu.com')">切换帐号</a></dd>
+                            <a onclick="xadmin.open('切换帐号','http://www.baidu.com')">Switch account</a></dd>
                         <dd>
-                            <a onclick="logout()" href="./login.html">退出</a></dd>
+                            <a onclick="logout()" href="./login.html">quit</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item to-index">
-                    <a href="../html/home.html">前台首页</a></li>
+                    <a href="../html/home.html">Front Desk Home</a></li>
             </ul>
         </div>
         <!-- 顶部结束 -->
@@ -82,26 +82,26 @@
                     <li>
                         <a href="javascript:;">
                             <i class="iconfont left-nav-li" lay-tips="用户管理">&#xe6b8;</i>
-                            <cite>用户管理</cite>
+                            <cite>User Management</cite>
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
                             <li>
                                 <a onclick="xadmin.add_tab('用户管理','user/member-list.html')">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>用户管理</cite></a>
+                                    <cite>User Management</cite></a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:;">
-                            <i class="iconfont left-nav-li" lay-tips="留言管理">&#xe698;</i>
-                            <cite>留言管理</cite>
+                            <i class="iconfont left-nav-li" lay-tips="liuyan">&#xe698;</i>
+                            <cite>Comment Management</cite>
                             <i class="iconfont nav_right">&#xe697;</i></a>
                         <ul class="sub-menu">
                             <li>
-                                <a onclick="xadmin.add_tab('留言列表','message/message-list.html',true)">
+                                <a onclick="xadmin.add_tab('l','message/message-list.html',true)">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>留言列表</cite></a>
+                                    <cite>Message List</cite></a>
                             </li>
                         </ul>
                     </li>
@@ -116,12 +116,12 @@
             <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
                 <ul class="layui-tab-title">
                     <li class="home">
-                        <i class="layui-icon">&#xe68e;</i>我的桌面</li></ul>
+                        <i class="layui-icon">&#xe68e;</i>My desktop</li></ul>
                 <div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">
                     <dl>
-                        <dd data-type="this">关闭当前</dd>
-                        <dd data-type="other">关闭其它</dd>
-                        <dd data-type="all">关闭全部</dd></dl>
+                        <dd data-type="this">Close current</dd>
+                        <dd data-type="other">Close other</dd>
+                        <dd data-type="all">Close all</dd></dl>
                 </div>
                 <div class="layui-tab-content">
                     <div class="layui-tab-item layui-show">

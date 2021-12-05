@@ -41,21 +41,21 @@ function member_stop(obj,id){
             success: function (data) {
                 console.log(data);
                 if (data == 1) {
-                    if ($(obj).attr('title') == '已过审') {
+                    if ($(obj).attr('title') == 'Audited') {
 
                         //发异步把用户状态进行更改
-                        $(obj).attr('title', '未过审')
+                        $(obj).attr('title', 'Not yet audited')
                         $(obj).find('i').html('&#xe62f;');
 
-                        $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('未过审');
-                        layer.msg('未过审!', {icon: 5, time: 1000});
+                        $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('Not yet audited');
+                        layer.msg('Not yet audited!', {icon: 5, time: 1000});
 
                     } else {
-                        $(obj).attr('title', '已过审')
+                        $(obj).attr('title', 'Audited')
                         $(obj).find('i').html('&#xe601;');
 
-                        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已过审');
-                        layer.msg('已过审!', {icon: 5, time: 1000});
+                        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('Audited');
+                        layer.msg('Audited!', {icon: 5, time: 1000});
                     }
                 }
             }
