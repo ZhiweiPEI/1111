@@ -13,21 +13,37 @@ class CommentController extends Controller
         $film = $request -> input('film');
         $statut = $request -> input('statut');
         $db = DB::table('comment');
+        $rst = $db -> select("comment.id","comment.content","users.name","film.title","comment.create_time","comment.statut")
+                -> leftJoin("users","users.id","=","comment.user_id")
+                -> leftJoin("film","film.id","=","comment.film_id");
         if(!empty($user)){
-            $rst = $db -> where("user_id","=",$user);
+            $rst = $db -> where("users.name","=",$user);
         }
-        if(!empty($email)){
-            $rst = $db -> where("film_id","=",$film);
+        if(!empty($film)){
+            $rst = $db -> where("film.title","=",$film);
         }
-        if(!empty($email)){
-            $rst = $db -> where("film_id","=",$film);
+        if(!empty($statut)){
+            $rst = $db -> where("statut","=",$statut);
         }
-        $rst = $db -> get();
+        $rst = $db -> orderBy("create_time","desc") -> get();
         echo($rst);
     }
 
     public function getCount(Request $request){
-        $rst = DB::table('comment') -> count();
+        $user = $request -> input('user');
+        $film = $request -> input('film');
+        $statut = $request -> input('statut');
+        $db = DB::table('comment');
+        if(!empty($user)){
+            $rst = $db -> where("user_id","=",$user);
+        }
+        if(!empty($film)){
+            $rst = $db -> where("film_id","=",$film);
+        }
+        if(!empty($statut)){
+            $rst = $db -> where("statut","=",$statut);
+        }
+        $rst = $db -> count();
         echo($rst);
     }
 

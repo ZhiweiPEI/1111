@@ -86,8 +86,9 @@ function member_del(obj,id){
 
 function getSearchData() {
     return {
-        username: $("#username").val(),
-        email: $("#email").val(),
+        user: $("#user").val(),
+        film: $("#film").val(),
+        statut: $("#statut").val(),
         curPage: curPage,
         pageSize: pageSize
     };
@@ -112,18 +113,14 @@ function setList(data)  {
         html += '<tr>\n' +
             '                            <td>' + data[i].id + '</td>\n' +
             '                            <td>' + data[i].content + '</td>\n' +
-            '                            <td>' + setUndefinedToNull(data[i].user_id) + '</td>\n' +
-            '                            <td>' + setUndefinedToNull(data[i].film_id) + '</td>\n' +
+            '                            <td>' + setUndefinedToNull(data[i].name) + '</td>\n' +
+            '                            <td>' + setUndefinedToNull(data[i].title) + '</td>\n' +
             '                            <td>' + setUndefinedToNull(data[i].create_time) + '</td>\n' +
             '                            <td class="td-status">\n' +
             '                                <span class="layui-btn '+ (data[i].statut>0?"layui-btn-normal":"layui-btn-disabled") +' layui-btn-mini ">' + (data[i].statut > 0 ? "已过审" : "未过审") + '</span></td>\n' +
             '                            <td class="td-manage">\n' +
             '                                <a onclick="member_stop(this,' + data[i].id + ')" href="javascript:;" title="' + (data[i].statut > 0 ? "已过审" : "未过审") + '">\n' +
             '                                    <i class="layui-icon">&#xe601;</i>\n' +
-            '                                </a>\n' +
-            '                                <a title="编辑" onclick="edit(' + data[i].id + ')" href="javascript:;"\n' +
-            '                                   href="javascript:;">\n' +
-            '                                    <i class="layui-icon">&#xe642;</i>\n' +
             '                                </a>\n' +
             '                                <a title="删除" onclick="member_del(this,' + data[i].id + ')" href="javascript:;">\n' +
             '                                    <i class="layui-icon">&#xe640;</i>\n' +
@@ -152,11 +149,6 @@ function setRoles(data){
 
 function setUndefinedToNull(data) {
     return data == undefined ? "" : data;
-}
-
-function edit(id) {
-    sessionStorage.setItem("userId",id);
-    xadmin.open('编辑','member-edit.html',600,400);
 }
 
 function getCount(){
