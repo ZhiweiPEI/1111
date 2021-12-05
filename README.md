@@ -10,10 +10,15 @@
 - vscode remote container extension - https://code.visualstudio.com/docs/remote/containers
 ## Projet de démarrage
 1.git clone www
+
 2.Utilisez vscode pour ouvrir le fichier. Et rouvrir en utilisant le conteneur.
+
 3.
 - Apache on http://localhost:8080
 - PhpMyAdmin on http://localhost:8081
+- Page d'accueil du film http://localhost:8080/jalon2/catalogue/public
+
+4.
 
 ## How to use this template?
 
