@@ -1,5 +1,6 @@
 # CDAW_2022 Projet_movieWebsite 
-   ## auteur:ZhiweiPEI Xuechu WANG
+   ### auteur:ZhiweiPEI Xuechu WANG
+   ###Lien vidéo：www.google.com
 
 ## Prerequisites
 
@@ -7,7 +8,12 @@
 - docker - https://docs.docker.com/get-docker/
 - vscode - https://code.visualstudio.com/
 - vscode remote container extension - https://code.visualstudio.com/docs/remote/containers
-- create a github account
+## Projet de démarrage
+1.git clone www
+2.Utilisez vscode pour ouvrir le fichier. Et rouvrir en utilisant le conteneur.
+3.
+- Apache on http://localhost:8080
+- PhpMyAdmin on http://localhost:8081
 
 ## How to use this template?
 
