@@ -53,25 +53,69 @@
             dd($rst);
         }
 
-        public function update(){
-            $db = DB::table('user');
-            $rst = $db -> where('id','=','5') -> update([  
-                'name' => 'Zhiwei',                  
-                'email' => 'zhiwei@gmail.com'
+        public function update(Request $request){
+            $id = $request -> input('id');
+            $name = $request -> input('username');
+            $email = $request -> input('email');
+            $enable = $request -> input('enable');
+            $db = DB::table('users');
+            $rst = $db -> where('id','=',$id) -> update([  
+                'name' => $name,                  
+                'email' => $email,
+                'enable' => $enable
             ]);
-            dd($rst);
+            echo(1);
         }
 
-        public function select(){
-            $db = DB::table('user');
+        public function updateEnable(Request $request){
+            $id = $request -> input('id');
+            $db = DB::table('users');
+            $enable = $db -> select('enable') -> where('id','=',$id) -> first();
+            if($enable -> enable > 0){
+                $enable = 0;
+            }
+            else if($enable -> enable == 0){
+                $enable = 1;
+            }
+            $rst = $db -> where('id','=',$id) -> update([  
+                'enable' => $enable
+            ]);
+            echo(1);
+        }
+
+        public function select(Request $request){
+            $name = $request -> input('username');
+            $email = $request -> input('email');
+            $db = DB::table('users');
+            if(!empty($name)){
+                $rst = $db -> where("name","like",$name);
+            }
+            if(!empty($email)){
+                $rst = $db -> where("email","like",$email);
+            }
             $rst = $db -> get();
-            dd($rst);
+            echo($rst);
         }
 
-        public function del(){
-            $db = DB::table('user');
-            $rst = $db -> where('id','=','9') -> delete();
-            dd($rst);
+        public function getCount(Request $request){
+            $name = $request -> input('username');
+            $email = $request -> input('email');
+            $db = DB::table('users');
+            if(!empty($name)){
+                $rst = $db -> where("name","like",$name);
+            }
+            if(!empty($email)){
+                $rst = $db -> where("email","like",$email);
+            }
+            $rst = $db -> count();
+            echo($rst);
+        }
+
+        public function del(Request $request){
+            $id = $request -> input("id");
+            $db = DB::table('users');
+            $rst = $db -> where('id','=',$id) -> delete();
+            echo(1);
         }
 
         public function selectIdByEmail(Request $request){

@@ -83,9 +83,12 @@ namespace App\Http\Controllers;
         Route::get('test3', 'App\Http\Controllers\UserController@test3');
         Route::get('test4', 'App\Http\Controllers\UserController@test4');
         Route::post('add', 'App\Http\Controllers\UserController@add');
-        Route::get('del', 'App\Http\Controllers\UserController@del');
-        Route::get('update', 'App\Http\Controllers\UserController@update');
+        Route::post('del', 'App\Http\Controllers\UserController@del');
+        Route::post('update', 'App\Http\Controllers\UserController@update');
         Route::get('select', 'App\Http\Controllers\UserController@select');
+        Route::post('getCount', 'App\Http\Controllers\UserController@getCount');
+        Route::post('updateEnable', 'App\Http\Controllers\UserController@updateEnable');
+        Route::post('selectById', 'App\Http\Controllers\UserController@selectById');
         Route::get('selectIdByEmail', 'App\Http\Controllers\UserController@selectIdByEmail');
     });
 

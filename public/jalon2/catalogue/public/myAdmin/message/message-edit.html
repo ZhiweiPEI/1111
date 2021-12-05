@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.2</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/xadmin.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="../js/x-login-session.js"></script> -->
+    <script type="text/javascript" src="../lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/xadmin.js"></script>
+    <script src="../js/wangEditor.min.js"></script>
+    <script src="../js/message/x-message-edit.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-row">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    <span class="x-red">*</span>留言标题</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="L_title" name="title" required="" lay-verify="title" autocomplete="off" class="layui-input"></div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    <span class="x-red">*</span>留言账号</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="L_email" name="email" required="" lay-verify="email" autocomplete="off" class="layui-input"></div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    <span class="x-red">*</span>留言内容</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="L_content" name="content" required="" lay-verify="content" autocomplete="off" class="layui-input"></div>
+            </div>
+            <div class="layui-form-item">
+                <label for="content" class="layui-form-label">
+                    <span class="x-red">*</span>回复内容</label>
+            </div>
+            <div id="content">
+            </div>
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-filter="add" lay-submit="">回复</button></div>
+        </form>
+    </div>
+</div>
+<script>layui.use(['form', 'layer','jquery'],
+    function() {
+        $ = layui.jquery;
+        var form = layui.form,
+            layer = layui.layer;
+
+        //监听提交
+        form.on('submit(add)',
+            function(data) {
+                data=data.field;
+                data.id=sessionStorage.getItem("messageId");
+                data.describe=editor.txt.text();
+                console.log(data);
+                $.ajax({
+                    url: 'http://localhost:8080/back/comment/reply',//地址：访问后台的地址
+                    data: data,//前端传递给后台的数据
+                    type: 'post',
+                    dataType: 'json',//是后端传递到前端的数据格式
+                    beforeSend: function(request) {
+                        request.setRequestHeader("Authorization", token);
+                    },
+                    xhrFields: {
+                        withCredentials: true // 发送Ajax时，Request header中会带上 Cookie 信息。
+                    },
+                    success: function (data) {//后端给前端的一个反馈
+                        console.log(data);
+                        if (data.result == "success") {
+                            //发异步，把数据提交给php
+                            layer.alert("回复成功", {
+                                    icon: 6
+                                },
+                                function () {
+                                    //关闭当前frame
+                                    xadmin.close();
+
+                                    // 可以对父窗口进行刷新
+                                    xadmin.father_reload();
+                                });
+                        } else {
+                            layer.alert("回复失败", {
+                                icon: 1
+                            });
+                        }
+                    }
+                });
+                //发异步，把数据提交给php
+                return false;
+            });
+
+    });</script>
+<script>
+    const E = window.wangEditor;
+    const editor = new E('#content');
+    const editUrl = '/upload';//服务器访问地址
+    editor.customConfig.menus = [
+        'head',  // 标题
+        'bold',  // 粗体
+        'fontSize',  // 字号
+        'fontName',  // 字体
+        'italic',  // 斜体
+        'underline',  // 下划线
+        'strikeThrough',  // 删除线
+        'foreColor',  // 文字颜色//
+        'backColor',  // 背景颜色
+        'link',  // 插入链接
+        'justify',  // 对齐方式
+        'emoticon',  // 表情
+        'image',  // 插入图片
+        'table',  // 表格
+        'undo',  // 撤销
+        'redo'  // 重复
+    ];
+    editor.customConfig.uploadImgShowBase64 = true;  // 使用 base64 保存图片
+    editor.customConfig.uploadImgServer = editUrl; // 上传图片到服务器
+    editor.customConfig.showLinkImg = false;// 隐藏“网络图片”tab
+    //配置属性名称，绑定请求的图片数据
+    //controller会用到，可以随便设置，但是一定要与controller一致
+    editor.customConfig.uploadFileName = 'imgHref';
+    editor.customConfig.withCredentials = true;
+    // 将图片大小限制为 5M
+    editor.customConfig.uploadImgMaxSize = 5 * 1024 * 1024;
+    editor.customConfig.uploadImgHooks = {
+        before: function (xhr, editor, files) {
+            // 图片上传之前触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
+
+            // 如果返回的结果是 {prevent: true, msg: 'xxxx'} 则表示用户放弃上传
+            // return {
+            //     prevent: true,
+            //     msg: '放弃上传'
+            // }
+        },
+        success: function (xhr, editor, result) {
+            // 图片上传并返回结果，图片插入成功之后触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+            console.log(result);
+        },
+        fail: function (xhr, editor, result) {
+            // 图片上传并返回结果，但图片插入错误时触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+        },
+        error: function (xhr, editor) {
+            // 图片上传出错时触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+        },
+        timeout: function (xhr, editor) {
+            // 图片上传超时时触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+        },
+
+        // 如果服务器端返回的不是 {errno:0, data: [...]} 这种格式，可使用该配置
+        // （但是，服务器端返回的必须是一个 JSON 格式字符串！！！否则会报错）
+        customInsert: function (insertImg, result, editor) {
+            // 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）
+            // insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
+
+            // 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
+            let url = result.url;
+            console.log(url);
+            insertImg(url)//回显到富文本里面
+            // result 必须是一个 JSON 格式字符串！！！否则报错
+        }
+    };
+    editor.create();
+</script>
+</body>
+
+</html>
