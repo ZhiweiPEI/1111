@@ -1,6 +1,6 @@
 # CDAW_2022 Projet_movieWebsite 
    ### auteur:ZhiweiPEI Xuechu WANG
-   ### Lien vidéo：www.google.com
+   ### Lien vidéo：https://www.youtube.com/watch?v=zIKIOh6rrzM&t=1s
    
    Il s'agit de notre projet UV3 CDAW, utilisant principalement le framework laravel pour écrire un site web de films. La partie frontale du projet était enveloppée de vue, js et css, et la partie arrière était principalement écrite en php avec un contrôleur et quelques scripts. Il comprend de nombreuses fonctionnalités telles que la connexion, la déconnexion et l'enregistrement des utilisateurs. Recherche de films par catégorie de films. Ajout, modification et suppression des commentaires des utilisateurs. Ajout de films favoris, ajout de films que vous avez déjà vus, etc.
 ## Prerequisites
