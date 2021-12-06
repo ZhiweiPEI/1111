@@ -39,6 +39,7 @@
    http://localhost:8080/jalon2/catalogue/public
 
 ## Introduction aux fonctions du site web
+-  user:
 1. Page d'accueil du film.
 - Informations diverses sur le film, le réalisateur, le titre, le genre, etc.
 - Bouton de détails du film
@@ -57,5 +58,7 @@
 - Il y a quatre listes au total, ce sont la liste des goûts, la liste des surveillances, la liste de l'historique et la liste de lecture.
 - Dans la liste, vous pouvez voir des informations sur le film correspondant.
 
+
+## Introduction aux fonctions du site web
 
 
